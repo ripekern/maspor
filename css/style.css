@@ -393,6 +393,12 @@ blockquote cite {
   margin: 0 0 .4rem;
 }
 
+.footer-official {
+  margin: 0 0 .55rem;
+  color: var(--footer-muted);
+  font-size: .78rem;
+}
+
 .footer-tag {
   margin: 0;
   color: var(--footer-muted);
