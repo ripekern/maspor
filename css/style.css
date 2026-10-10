@@ -843,6 +843,13 @@ blockquote cite {
   margin-bottom: 0;
 }
 
+.bch-logo {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin-top: .85rem;
+}
+
 .faq-answer blockquote {
   margin: .75rem 0 0;
   padding: .9rem 1.1rem;
