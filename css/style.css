@@ -377,6 +377,13 @@ blockquote cite {
   max-width: 26rem;
 }
 
+.footer-seal {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 0 .85rem;
+}
+
 .footer-title {
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 700;
