@@ -259,6 +259,10 @@ a:hover {
   justify-content: center;
 }
 
+.section > .wrap > .hero-cta {
+  max-width: none;
+}
+
 .btn {
   display: inline-block;
   font-family: ui-sans-serif, system-ui, sans-serif;
