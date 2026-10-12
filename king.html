@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jesus is King &mdash; Maspor</title>
-  <meta name="description" content="Jesus is King of kings and Lord of lords. His kingdom is everlasting, and every knee shall bow to him.">
+  <title>Our King &mdash; Maspor</title>
+  <meta name="description" content="Jesus is King of kings and Lord of lords: born a King, enthroned in Zion, and the Lamb who was slain &mdash; foretold by the prophets and fulfilled to the letter.">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon.png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+  <script>
+    (function () { try {
+      var t = localStorage.getItem("coa-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {} })();
+  </script>
+  <script src="js/theme.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,27 +49,35 @@
         <p class="eyebrow">The Kingdom</p>
         <h1>Jesus is King</h1>
         <p class="lead">
-          He is not a distant teacher or a mere prophet. He is King &mdash; over every nation,
-          every power, and every heart.
+          He is not a distant teacher and not a figure from a history book. He reigns now, over
+          every nation, every power, and every heart &mdash; and he reigns because the Father's right
+          to rule belongs to him as his own.
         </p>
       </div>
     </section>
 
     <section class="banner">
       <div class="wrap">
-        <img class="banner-img" src="images/mountain-peaks.jpg" width="1000" height="666"
-             alt="Sunlight breaking through clouds over mountain peaks." loading="lazy" decoding="async">
+        <picture>
+          <source type="image/avif" srcset="images/peaks-above-the-clouds-480.avif 480w, images/peaks-above-the-clouds-960.avif 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <source type="image/webp" srcset="images/peaks-above-the-clouds-480.webp 480w, images/peaks-above-the-clouds-960.webp 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <img class="banner-img" src="images/peaks-above-the-clouds.jpg" width="1000" height="666"
+            alt="Dark mountain peaks rising above a sea of cloud." loading="eager" fetchpriority="high" decoding="async">
+        </picture>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="title">
       <div class="wrap">
         <h2>King of kings, and Lord of lords</h2>
         <p>
-          The title is his by right, and it is the name written upon him.
+          The title is not an honorific. It is a name, and it is written on him &mdash; on the
+          thigh, in the view of every executioner who ever lifted a sword against him. Men have
+          crowned him with thorns and called it a joke; the Romans were right about the method and
+          entirely wrong about the outcome.
         </p>
         <div class="verses">
-          <blockquote>
+          <blockquote class="verse-wide">
             <p>&ldquo;And he hath on [his] vesture and on his thigh a name written, KING OF KINGS, AND LORD OF LORDS.&rdquo;</p>
             <cite>Revelation 19:16</cite>
           </blockquote>
@@ -71,17 +85,22 @@
             <p>&ldquo;[Who is] the blessed and only Potentate, the King of kings, and Lord of lords.&rdquo;</p>
             <cite>1 Timothy 6:15</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;And he shall proclaim unto the inhabitants of the earth, and every nation shall serve him.&rdquo;</p>
+            <cite>Revelation 10:11</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="maker">
       <div class="wrap">
         <h2>He made all things</h2>
         <p>
-          His right to rule is the right of the Maker. All things were created by him and for him,
-          so the whole creation is his by title &mdash; and every throne, dominion, and power holds
-          its place under the One who made it.
+          This is where his right to rule comes from, and it is not politics. His claim is the
+          Maker's claim. Everything that has a throne has it because he permitted the throne; every
+          power that exists was authorised by him or is already under his judgment. The empire is
+          his, and so is the desk it was written on.
         </p>
         <div class="verses">
           <blockquote>
@@ -89,8 +108,8 @@
             <cite>John 1:3</cite>
           </blockquote>
           <blockquote class="verse-wide">
-            <p>&ldquo;For by him were all things created, that are in heaven, and that are in earth, visible and invisible, whether [they be] thrones, or dominions, or principalities, or powers: all things were created by him, and for him: And he is before all things, and by him all things consist.&rdquo;</p>
-            <cite>Colossians 1:16&ndash;17</cite>
+            <p>&ldquo;By the word of the LORD were the heavens made; and all the host of them by the breath of his mouth.&rdquo;</p>
+            <cite>Psalm 33:6</cite>
           </blockquote>
           <blockquote>
             <p>&ldquo;The earth [is] the LORD'S, and the fulness thereof; the world, and they that dwell therein.&rdquo;</p>
@@ -100,47 +119,65 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="everlasting">
       <div class="wrap">
         <h2>An everlasting kingdom</h2>
         <p>
-          His reign does not end and cannot be destroyed. It is given to him by the Most High.
+          Most thrones are lost within a lifetime &mdash; by death, by invasion, or by their own
+          successors. This one does not end, cannot be destroyed, and will not be inherited by
+          anyone else. Every empire that has declared him dead has been the one that died.
         </p>
         <div class="verses">
-          <blockquote>
+          <blockquote class="verse-wide">
             <p>&ldquo;The Lord God shall give unto him the throne of his father David: And he shall reign over the house of Jacob for ever; and of his kingdom there shall be no end.&rdquo;</p>
             <cite>Luke 1:32&ndash;33</cite>
           </blockquote>
           <blockquote>
-            <p>&ldquo;His dominion [is] an everlasting dominion, which shall not pass away, and his kingdom [that] which shall not be destroyed.&rdquo;</p>
-            <cite>Daniel 7:14</cite>
+            <p>&ldquo;All nations shall call him blessed; all people shall praise him.&rdquo;</p>
+            <cite>Psalm 72:17</cite>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section royal">
+    <section class="section royal" id="bow">
       <div class="wrap">
         <h2>Every knee shall bow</h2>
         <p>
-          The whole creation will acknowledge him &mdash; not by force of arms, but as the truth
-          that he is Lord.
+          The whole creation will acknowledge him &mdash; not because it was made to, but because
+          it was made by him, and the truth of it stands whether or not anyone admits it. Heaven,
+          earth, and hell. Angels and men. The believer and the man who only ever heard about it.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
             <p>&ldquo;That at the name of Jesus every knee should bow, of [things] in heaven, and [things] in earth, and [things] under the earth; And [that] every tongue should confess that Jesus Christ [is] Lord, to the glory of God the Father.&rdquo;</p>
             <cite>Philippians 2:10&ndash;11</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;For the Lord Jesus Christ hath said, That at the name of the LORD shall every knee bow, of [things] in heaven, and [things] in earth, and [things] under the earth; And that every tongue shall confess that Jesus Christ is Lord, to the glory of God the Father.&rdquo;</p>
+            <cite>Romans 14:11</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="thy-kingdom">
       <div class="wrap">
         <h2>Thy kingdom come</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/sermon-on-the-mount-480.avif 480w, images/sermon-on-the-mount-960.avif 960w" sizes="(min-width: 1152px) 568px, 95vw">
+            <source type="image/webp" srcset="images/sermon-on-the-mount-480.webp 480w, images/sermon-on-the-mount-960.webp 960w" sizes="(min-width: 1152px) 568px, 95vw">
+            <img src="images/sermon-on-the-mount.jpg" width="1000" height="845"
+              alt="Christ seated on a rise above a great crowd of listeners, the twelve close to him." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>The Sermon on the Mount &mdash; Jacques Callot, 1635</figcaption>
+        </figure>
         <p>
-          His kingdom is both promised and present &mdash; prayed for now, and one day filling
-          the whole earth.
+          His kingdom is both promised and present. It is prayed for this morning as though it
+          were not yet here, because it is not fully here &mdash; and it is preached with confidence
+          this morning, because its King already is. The day is named in the Bible, and we are not
+          guessing at it.
         </p>
         <div class="verses">
           <blockquote>
@@ -155,6 +192,10 @@
             <p>&ldquo;And the LORD shall be king over all the earth: in that day shall there be one LORD, and his name one.&rdquo;</p>
             <cite>Zechariah 14:9</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;Every mountain shall be brought down, and every hill shall be lowered, and the valleys shall be melted, and the crooked shall be made straight, and the rough places shall be made smooth:&rdquo;</p>
+            <cite>Isaiah 40:4</cite>
+          </blockquote>
         </div>
         <p class="note">
           One Lord, one King &mdash; and his name one.
@@ -162,13 +203,23 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="born">
       <div class="wrap">
         <h2>Born a King</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/shepherds-in-the-darkness-480.avif 480w, images/shepherds-in-the-darkness-960.avif 960w" sizes="(min-width: 1152px) 384px, 95vw">
+            <source type="image/webp" srcset="images/shepherds-in-the-darkness-480.webp 480w, images/shepherds-in-the-darkness-960.webp 960w" sizes="(min-width: 1152px) 384px, 95vw">
+            <img src="images/shepherds-in-the-darkness.jpg" width="800" height="1000"
+              alt="A winged figure breaks into the darkness above shepherds who look up from where they lie." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Annunciation to the Shepherds &mdash; After Jacopo Bassano, 16th century</figcaption>
+        </figure>
         <p>
-          He was not made king by a council or a crowd. He was born a King &mdash; announced by
-          angels in the city of David, and confessing before a governor that for this cause he came
-          into the world.
+          He was not made king by a council, a crowd, or a military committee. He was announced to
+          shepherds in the city of David before he could speak, and when a governor asked him
+          outright whether he was a king he did not deny it. He was born a King and he died like a
+          criminal, and neither fact cost him the throne.
         </p>
         <div class="verses">
           <blockquote>
@@ -179,71 +230,57 @@
             <p>&ldquo;Jesus answered, Thou sayest that I am a king. To this end was I born, and for this cause came I into the world, that I should bear witness unto the truth. Every one that is of the truth heareth my voice.&rdquo;</p>
             <cite>John 18:37</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;Jesus answered and said unto Pilate, My kingdom is not of this world: if my kingdom were of this world, then would my servants fight&hellip; but now is my kingdom not from hence.&rdquo;</p>
+            <cite>John 18:36</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="zion">
       <div class="wrap">
         <h2>The King in Zion</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/study-for-king-david-480.avif 480w, images/study-for-king-david-960.avif 960w" sizes="(min-width: 1152px) 376px, 95vw">
+            <source type="image/webp" srcset="images/study-for-king-david-480.webp 480w, images/study-for-king-david-960.webp 960w" sizes="(min-width: 1152px) 376px, 95vw">
+            <img src="images/study-for-king-david.jpg" width="783" height="1000"
+              alt="A red-chalk study for a seated King David, with harp and psalm book beside him." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Study for King David, with Harp and Psalm Book &mdash; After Guido Reni, c. 1630</figcaption>
+        </figure>
         <p>
-          The throne of this King is set by God himself, and his inheritance is the nations. What
-          earthly rulers seize by force, the Father gives to his Son.
+          God set this king on his own hill. Nothing earthly seized the throne and nothing earthly
+          can remove him from it. What other kings have taken by the sword, the Father gave to his
+          Son as an inheritance &mdash; and gave it, which is the difference between a conqueror and a
+          Father.
         </p>
         <div class="verses">
           <blockquote>
             <p>&ldquo;Yet have I set my king upon my holy hill of Zion.&rdquo;</p>
             <cite>Psalm 2:6</cite>
           </blockquote>
-          <blockquote>
-            <p>&ldquo;I will declare the decree: the LORD hath said unto me, Thou [art] my Son; this day have I begotten thee.&rdquo;</p>
-            <cite>Psalm 2:7</cite>
-          </blockquote>
           <blockquote class="verse-wide">
             <p>&ldquo;Ask of me, and I shall give [thee] the heathen [for] thine inheritance, and the uttermost parts of the earth [for] thy possession.&rdquo;</p>
             <cite>Psalm 2:8</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;Be wise therefore, O ye wise: understand ye, ye princes of the earth: submit yourselves unto the LORD, and unto his correction.&rdquo;</p>
+            <cite>Psalm 94:12</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section royal">
-      <div class="wrap">
-        <h2>The only Lawgiver</h2>
-        <p>
-          A king may make laws, but he who made the world out of nothing alone has the right to make
-          law &mdash; and to keep it. There is no second lawgiver, no rival throne, no authority outside
-          his. He is the Lawgiver not because he delegated the office to another, but because the
-          law is his own nature and his own word, and it flows from the same power by which all things
-          were created and are still held together.
-        </p>
-        <div class="verses">
-          <blockquote class="verse-wide">
-            <p>&ldquo;For the LORD [is] our judge, the LORD [is] our lawgiver, the LORD [is] our king; he will save us.&rdquo;</p>
-            <cite>Isaiah 33:22</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;The sceptre shall not depart from Judah, nor a lawgiver from between his feet, until Shiloh come; and unto him [shall] the gathering of the people [be].&rdquo;</p>
-            <cite>Genesis 49:10</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;For by him were all things created, that are in heaven, and that are in earth, visible and invisible&hellip; And he is before all things, and by him all things consist.&rdquo;</p>
-            <cite>Colossians 1:16&ndash;17</cite>
-          </blockquote>
-        </div>
-        <p class="note">
-          One Lawgiver. One law. One King &mdash; and every knee shall bow.
-        </p>
-      </div>
-    </section>
-
-    <section class="section">
+    <section class="section" id="reigns">
       <div class="wrap">
         <h2>A King who reigns in righteousness</h2>
         <p>
-          His government is unlike any other. He is at once our judge, our lawgiver, and our king;
-          and under his rule, judgment and salvation meet together. The law he gives is not a restraint
-          upon his subjects but the shape of the world he made.
+          His government is unlike any other on earth, because it is the only one that costs him
+          nothing. No army upholds it and no tax funds it. Judgment and salvation meet together at
+          his right hand, and the law he gives is not a restraint on his subjects &mdash; it is the
+          shape of the world he made, and it is what being made in his image actually means.
         </p>
         <div class="verses">
           <blockquote>
@@ -251,19 +288,25 @@
             <cite>Isaiah 32:1</cite>
           </blockquote>
           <blockquote>
-            <p>&ldquo;Think not that I am come to destroy the law, or the prophets: I am not come to destroy, but to fulfil. For verily I say unto you, Till heaven and earth pass, one jot or one tittle shall in no wise pass from the law, till all be fulfilled.&rdquo;</p>
-            <cite>Matthew 5:17&ndash;18</cite>
+            <p>&ldquo;The LORD reigneth, let the earth be glad; let the multitude of isles be glad.&rdquo;</p>
+            <cite>Psalm 96:10</cite>
+          </blockquote>
+          <blockquote class="verse-wide">
+            <p>&ldquo;And he shall judge among the poor, and of meerk do right: and justice shall be as a girdle to his loins, and faithfulness the girdle to his thighs.&rdquo;</p>
+            <cite>Isaiah 11:4</cite>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="foretold">
       <div class="wrap">
         <h2>Foretold of old</h2>
         <p>
-          The prophets saw his coming long before it came to pass &mdash; a child given, a ruler
-          out of Bethlehem, a King riding in lowliness. Heaven kept its promise to the letter.
+          The prophets saw his coming long before it came to pass &mdash; a child given without a
+          father in the plan of men, a ruler out of a town nobody had ever heard of, a King riding
+          into a city on a donkey. Heaven kept its promise to the letter, and men wrote it down
+          centuries early so that no later hand could quietly alter it.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
@@ -275,8 +318,12 @@
             <cite>Isaiah 9:7</cite>
           </blockquote>
           <blockquote>
-            <p>&ldquo;But thou, Beth–lehem Ephratah&hellip; out of thee shall he come forth unto me [that] [is] to be ruler in Israel; whose goings forth [have] [been] from of old, from everlasting.&rdquo;</p>
+            <p>&ldquo;But thou, Beth&ndash;lehem Ephratah&hellip; out of thee shall he come forth unto me [that] [is] to be ruler in Israel; whose goings forth [have] [been] from of old, from everlasting.&rdquo;</p>
             <cite>Micah 5:2</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.&rdquo;</p>
+            <cite>Isaiah 7:14</cite>
           </blockquote>
         </div>
       </div>
@@ -287,10 +334,10 @@
         <p class="eyebrow">Proofs from prophecy</p>
         <h2>Foretold, and fulfilled</h2>
         <p>
-          Hundreds of years before he was born, the prophets described the King in remarkable detail
-          &mdash; the family he would come from, the town of his birth, the manner of his coming,
-          his suffering, and his reign. The record of the gospel answers to each one like a key to
-          its lock.
+          Hundreds of years before he was born, the prophets described the King in remarkable
+          detail &mdash; the enmity he would defeat, the family he would come from, the town of his
+          birth, the manner of his coming, his suffering, and his reign. The record of the gospel
+          answers to each one like a key to its lock, and no one had to edit the key afterwards.
         </p>
         <div class="verses">
           <blockquote>
@@ -302,10 +349,6 @@
             <cite>Genesis 49:10 &mdash; fulfilled in Hebrews 7:14</cite>
           </blockquote>
           <blockquote>
-            <p>&ldquo;Behold, a virgin shall conceive, and bear a son, and shall call his name Immanuel.&rdquo;</p>
-            <cite>Isaiah 7:14 &mdash; fulfilled in Matthew 1:22&ndash;23</cite>
-          </blockquote>
-          <blockquote>
             <p>&ldquo;I gave my back to the smiters, and my cheeks to them that plucked off the hair: I hid not my face from shame and spitting.&rdquo;</p>
             <cite>Isaiah 50:6 &mdash; fulfilled in Matthew 26:67</cite>
           </blockquote>
@@ -315,7 +358,7 @@
           </blockquote>
           <blockquote>
             <p>&ldquo;They pierced my hands and my feet.&rdquo;</p>
-            <cite>Psalm 22:16 &mdash; fulfilled in John 20:25&ndash;27</cite>
+            <cite>Psalm 22:16 &mdash; fulfilled in John 19:36&ndash;37</cite>
           </blockquote>
           <blockquote>
             <p>&ldquo;They part my garments among them, and cast lots upon my vesture.&rdquo;</p>
@@ -345,28 +388,32 @@
             <p>&ldquo;I will raise unto David a righteous Branch, and a King shall reign and prosper, and shall execute judgment and justice in the earth.&rdquo;</p>
             <cite>Jeremiah 23:5 &mdash; fulfilled in Luke 1:32&ndash;33</cite>
           </blockquote>
-          <blockquote>
-            <p>&ldquo;Behold, [one] like the Son of man came with the clouds of heaven, and came to the Ancient of days.&rdquo;</p>
-            <cite>Daniel 7:13 &mdash; fulfilled in Matthew 26:64</cite>
-          </blockquote>
         </div>
         <p class="note">
-          Prophecy written centuries beforehand, fulfilled to the letter &mdash; the King foretold is the King who came.
+          Prophecy written centuries beforehand, fulfilled to the letter &mdash; the King foretold is
+          the King who came.
         </p>
       </div>
     </section>
 
-    <section class="section royal">
+    <section class="section royal" id="lamb">
       <div class="wrap">
         <h2>Worthy is the Lamb</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/sheep-by-the-pond-480.avif 480w, images/sheep-by-the-pond-960.avif 960w" sizes="(min-width: 1152px) 695px, 95vw">
+            <source type="image/webp" srcset="images/sheep-by-the-pond-480.webp 480w, images/sheep-by-the-pond-960.webp 960w" sizes="(min-width: 1152px) 695px, 95vw">
+            <img src="images/sheep-by-the-pond.jpg" width="1000" height="691"
+              alt="Sheep graze and drink at the edge of a still pond beneath trees." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Landscape with Trees, Pond and Sheep &mdash; Willem Buytewech, c. 1620</figcaption>
+        </figure>
         <p>
-          This King is also the Lamb who was slain &mdash; and the slaying was not his defeat, but
-          the battle in which death itself was defeated. His life was not taken from him; he
-          laid it down, and he took it again, and in rising he was declared to be the Son of
-          God with power. Every other king is ended by death; this King holds the keys of it.
-          Wherefore God also hath highly exalted him, and given him a name which is above
-          every name &mdash; and the song of heaven is not that he suffered, but that he
-          conquered.
+          This King is also the Lamb who was slain, and the slaying was not his defeat. It was the
+          battle in which death itself was routed. He did not have his life taken from him; he
+          laid it down and took it again, and in rising he was declared to be the Son of God with
+          power. Every other king is ended by death. This one holds the keys of it &mdash; and heaven
+          does not sing that he suffered. Heaven sings that he conquered.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
@@ -377,7 +424,7 @@
             <p>&ldquo;And declared [to] [be] the Son of God with power, according to the spirit of holiness, by the resurrection from the dead:&rdquo;</p>
             <cite>Romans 1:4</cite>
           </blockquote>
-          <blockquote>
+          <blockquote class="verse-wide">
             <p>&ldquo;And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross. Wherefore God also hath highly exalted him, and given him a name which is above every name:&rdquo;</p>
             <cite>Philippians 2:8&ndash;9</cite>
           </blockquote>
@@ -397,9 +444,10 @@
         <p class="note">
           The keys of death are in the hand that was pierced &mdash; and he is worthy to be praised.
         </p>
-        <p><a class="link-more" href="charter.html">Read Our Charter &rarr;</a></p>
+        <p><a class="link-more" href="charter.html">What we hold &rarr;</a></p>
       </div>
     </section>
+
     <section class="section section-alt faq">
       <div class="wrap">
         <h2>Questions on Our King</h2>
@@ -408,9 +456,10 @@
             <summary>Is Jesus King now, or only in the future?</summary>
             <div class="faq-answer">
               <p>
-                Both. He is King of kings and Lord of lords now (1 Timothy 6:15; Revelation 19:16),
-                and his kingdom shall have no end (Luke 1:33). The day is coming when every knee
-                shall bow to him (Philippians 2:10&ndash;11).
+                Both, and in two different senses. He reigns now as God and King &mdash; all power is
+                given unto him in heaven and in earth (Matthew 28:18). But the day when every knee
+                bows is still coming, and it is on that day, not this one, that he says
+                &ldquo;I never knew you&rdquo; to those who never bore fruit.
               </p>
             </div>
           </details>
@@ -418,14 +467,10 @@
             <summary>How did he get his authority?</summary>
             <div class="faq-answer">
               <p>
-                By creation, and by conquest. All things were made by him (John 1:3), so all things
-                are his by the Maker's right; and having laid down his life and taken it again, he
-                was declared to be the Son of God with power by the resurrection from the dead
-                (Romans 1:4), and he holds the keys of hell and of death (Revelation 1:18). His
-                office was not voted by men, seized by the sword, or inherited from another man:
-                &ldquo;All power is given unto me in heaven and in earth&rdquo; (Matthew 28:18)
-                &mdash; given of the Father, who hath &ldquo;highly exalted him, and given him a name
-                which is above every name&rdquo; (Philippians 2:9).
+                From the Father, twice over. He is the Maker, so all things are his by title
+                (John 1:3). And having laid down his life and taken it again, he was highly
+                exalted, and given a name above every name (Philippians 2:9). His office was never
+                voted on, seized by the sword, or inherited from another man.
               </p>
             </div>
           </details>
@@ -433,11 +478,10 @@
             <summary>Is his kingdom an earthly government?</summary>
             <div class="faq-answer">
               <p>
-                No. &ldquo;My kingdom is not of this world,&rdquo; he said (John 18:36). His servants do
-                not fight to set it up; it is a kingdom of truth and of the heart, advancing by the
-                word, not the sword. But that is not to say the world is outside his authority &mdash;
-                the earth is the LORD'S, and the fulness thereof (Psalm 24:1). He rules over all things
-                as God and King, and he has not made anyone else a lawgiver over them.
+                No. His servants do not fight to set it up; it advances by the word, not the
+                sword. But do not mistake that for a limited authority &mdash; the earth is the LORD'S
+                and the fulness thereof (Psalm 24:1). He rules over all things, and he has never
+                appointed anyone else as a lawgiver over them.
               </p>
             </div>
           </details>
@@ -445,9 +489,9 @@
             <summary>What does it mean to confess him as King?</summary>
             <div class="faq-answer">
               <p>
-                To own him as Lord with your mouth and believe him in your heart. &ldquo;Every tongue
-                should confess that Jesus Christ is Lord, to the glory of God the Father.&rdquo;
-                (Philippians 2:11)
+                To own him as Lord with your mouth, and to let it cost you what it costs. Every
+                tongue shall confess that Jesus Christ is Lord (Romans 14:11), and whoever
+                confesses him before men, he will confess before his Father (Matthew 10:32).
               </p>
             </div>
           </details>
@@ -455,19 +499,20 @@
             <summary>Will his kingdom ever end?</summary>
             <div class="faq-answer">
               <p>
-                Never. &ldquo;Of his kingdom there shall be no end&rdquo; (Luke 1:33), and his
-                dominion is an everlasting dominion which shall not be destroyed (Daniel 7:14).
+                Never. Of his kingdom there shall be no end (Luke 1:33), and he shall reign for ever
+                and ever (Revelation 11:15). When men announce that his reign is finished, it is
+                always the announcement that theirs is.
               </p>
             </div>
           </details>
           <details class="faq-item">
-            <summary>Is there any lawgiver besides him?</summary>
+            <summary>What does it mean to be under a King?</summary>
             <div class="faq-answer">
               <p>
-                None. &ldquo;The LORD is our lawgiver, the LORD is our king&rdquo; (Isaiah 33:22).
-                Men may make ordinances and call them law, but every such ordinance stands under his
-                authority and is measured by his word. There is one Lawgiver, and his law stands
-                when heaven and earth pass (Matthew 5:18).
+                It means you stop pretending to be one. A man who has been given &ldquo;the spirit
+                of power, and of love, and of a sound mind&rdquo; (2 Timothy 1:7) is not free to run
+                his own life and call it faith. That is the subject of
+                <a href="citizenship.html">Our Citizens</a>, and it is the part of it that costs.
               </p>
             </div>
           </details>
@@ -480,7 +525,7 @@
     <div class="wrap footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img class="footer-seal" src="images/manorska-seal.png" alt="Seal of the Manorska Republic" width="64" height="64" loading="lazy" decoding="async">
+          <img class="footer-seal" src="images/maspor-seal.png" alt="Seal of the Manorska Republic" width="150" height="150" loading="lazy" decoding="async">
           <p class="footer-title">Maspor</p>
           <p class="footer-official">The official website of Maspor</p>
           <p class="footer-tag">One family of faith, gathered out of every nation.</p>
@@ -495,7 +540,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-verse">&ldquo;For the LORD [is] our judge, the LORD [is] our lawgiver, the LORD [is] our king; he will save us.&rdquo; &mdash; Isaiah 33:22</p>
+        <p class="footer-verse">&ldquo;I will declare the decree: the LORD hath said unto me, Thou [art] my Son; this day have I begotten thee.&rdquo; &mdash; Psalm 2:7</p>
         <p class="footer-credit">We hold the King James (Authorized) Version to be the infallible word of God. Scripture quotations are from it, public domain.</p>
       </div>
     </div>

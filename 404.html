@@ -4,13 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found &mdash; Maspor</title>
-  <meta name="description" content="This page was not found &mdash; but the door is still open. Find your way to the government under God, the King, the Charter, citizenship, heritage, and the benefits of the LORD.">
+  <meta name="description" content="The page you asked for is not here. The Shepherd goes after the one that is lost &mdash; here is the way back.">
   <meta name="robots" content="noindex">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon.png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+  <script>
+    (function () { try {
+      var t = localStorage.getItem("coa-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {} })();
+  </script>
+  <script src="js/theme.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -44,20 +50,24 @@
         <p class="eyebrow">Error 404</p>
         <h1>This page was not found</h1>
         <p class="lead">
-          The page you asked for isn't here &mdash; but the door is still open.
-          Choose a path below and come in.
+          The page you asked for isn't here &mdash; but the door is still open, and you are still
+          welcome at it. Choose a path below, or start again from the beginning.
         </p>
         <p class="hero-cta">
           <a class="btn" href="index.html">Back to home</a>
-          <a class="btn btn-ghost" href="citizenship.html">Who is a citizen?</a>
+          <a class="btn btn-ghost" href="benefits.html#contact">Ask us</a>
         </p>
       </div>
     </section>
 
     <section class="banner">
       <div class="wrap">
-        <img class="banner-img" src="images/misty-path.jpg" width="1280" height="720"
-             alt="A woodland path winding through grey mist." loading="lazy" decoding="async">
+        <picture>
+          <source type="image/avif" srcset="images/forest-in-mist-480.avif 480w, images/forest-in-mist-960.avif 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <source type="image/webp" srcset="images/forest-in-mist-480.webp 480w, images/forest-in-mist-960.webp 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <img class="banner-img" src="images/forest-in-mist.jpg" width="1280" height="720"
+            alt="Spruce trees standing in a grey morning mist." loading="eager" fetchpriority="high" decoding="async">
+        </picture>
       </div>
     </section>
 
@@ -69,12 +79,14 @@
         </blockquote>
       </div>
     </section>
+
     <section class="section">
       <div class="wrap">
         <h2>A word for the way</h2>
         <p>
-          A wrong turn is not the end of the road. The Scripture is full of seekers who were found,
-          and of a Shepherd who goes after the one that is lost.
+          A wrong turn is not the end of the road. He says it Himself: the ones who seek him will
+          find him, and the one that was lost is worth leaving ninety-nine for. Nothing on this site
+          is beyond reach, and no one who arrives here at a dead end has been written off.
         </p>
         <div class="verses">
           <blockquote>
@@ -90,20 +102,22 @@
             <cite>Luke 15:4</cite>
           </blockquote>
         </div>
-        <p><a class="link-more" href="index.html">Government under God &rarr;</a></p>
+        <p><a class="link-more" href="index.html">Our Government &rarr;</a></p>
       </div>
     </section>
+
     <section class="section section-alt faq">
       <div class="wrap">
-        <h2>Lost? A few quick answers</h2>
+        <h2>A few quick answers</h2>
         <div class="faq-list">
           <details class="faq-item">
             <summary>Where should I go from here?</summary>
             <div class="faq-answer">
               <p>
-                Start at the <a href="index.html">home page</a>, or use the menu above to reach
-                <a href="charter.html">Our Charter</a>, <a href="citizenship.html">Our Citizens</a>,
-                or <a href="king.html">Our King</a>.
+                Start at the <a href="index.html">home page</a>, or use the menu above. If you are
+                new to us, read <a href="charter.html">Our Charter</a> for what we believe and
+                <a href="heritage.html">Our Heritage</a> for what marks his people &mdash; the second
+                of those is the page we would ask you to read twice.
               </p>
             </div>
           </details>
@@ -111,10 +125,11 @@
             <summary>Did the page move or get renamed?</summary>
             <div class="faq-answer">
               <p>
-                It may have. Some pages have new names &mdash; the page once called
-                &ldquo;Beliefs&rdquo; is now <a href="charter.html">Our Charter</a>,
-                &ldquo;Welcome&rdquo; is now <a href="citizenship.html">Our Citizens</a>, and
-                &ldquo;About&rdquo; is now <a href="heritage.html">Our Heritage</a>, and &ldquo;Contact&rdquo; is now <a href="benefits.html">Our Benefits</a>.
+                It may have. Some pages have new names &mdash; the page once called &ldquo;Beliefs&rdquo;
+                is now <a href="charter.html">Our Charter</a>, &ldquo;Welcome&rdquo; is now
+                <a href="citizenship.html">Our Citizens</a>, &ldquo;About&rdquo; is now
+                <a href="heritage.html">Our Heritage</a>, and &ldquo;Contact&rdquo; is now
+                <a href="benefits.html">Our Benefits</a>.
               </p>
             </div>
           </details>
@@ -122,17 +137,8 @@
             <summary>Can I still reach you?</summary>
             <div class="faq-answer">
               <p>
-                Yes &mdash; you can always <a href="benefits.html#contact">apply here</a>.
-              </p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Where should a newcomer begin?</summary>
-            <div class="faq-answer">
-              <p>
-                Try <a href="charter.html">Our Charter</a> for what we believe, or
-                <a href="citizenship.html">Our Citizens</a> for how one enters the kingdom.
-                <a href="king.html">Our King</a> page tells of him who reigns over all.
+                Yes &mdash; you can always <a href="benefits.html#contact">write to us</a>, by email
+                or by post. A broken link is our fault, and we would rather hear about it.
               </p>
             </div>
           </details>
@@ -140,9 +146,9 @@
             <summary>Is there a word for a seeker?</summary>
             <div class="faq-answer">
               <p>
-                Yes. &ldquo;Seek ye the LORD while he may be found, call ye upon him while he is
-                near.&rdquo; (Isaiah 55:6) &ldquo;And ye shall seek me, and find [me], when ye
-                shall search for me with all your heart.&rdquo; (Jeremiah 29:13)
+                Yes. &ldquo;Seek ye the LORD while he may be found, call ye upon him while he is near.&rdquo;
+                (Isaiah 55:6) &ldquo;And ye shall seek me, and find [me], when ye shall search for me
+                with all your heart.&rdquo; (Jeremiah 29:13)
               </p>
             </div>
           </details>
@@ -155,7 +161,7 @@
     <div class="wrap footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img class="footer-seal" src="images/manorska-seal.png" alt="Seal of the Manorska Republic" width="64" height="64" loading="lazy" decoding="async">
+          <img class="footer-seal" src="images/maspor-seal.png" alt="Seal of the Manorska Republic" width="150" height="150" loading="lazy" decoding="async">
           <p class="footer-title">Maspor</p>
           <p class="footer-official">The official website of Maspor</p>
           <p class="footer-tag">One family of faith, gathered out of every nation.</p>
@@ -170,7 +176,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-verse">&ldquo;For the LORD [is] our judge, the LORD [is] our lawgiver, the LORD [is] our king; he will save us.&rdquo; &mdash; Isaiah 33:22</p>
+        <p class="footer-verse">&ldquo;Seek ye the LORD while he may be found, call ye upon him while he is near.&rdquo; &mdash; Isaiah 55:6</p>
         <p class="footer-credit">We hold the King James (Authorized) Version to be the infallible word of God. Scripture quotations are from it, public domain.</p>
       </div>
     </div>

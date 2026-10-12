@@ -3,13 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Citizenship &mdash; Maspor</title>
-  <meta name="description" content="Citizenship in the kingdom of God: born from above, subjects of the one King under his law, one fold out of every kindred and tongue; and the offices he set in the church — apostles, prophets, evangelists, pastors and teachers, bishops and deacons.">
+  <title>Our Citizens &mdash; Maspor</title>
+  <meta name="description" content="Citizenship in the kingdom of God: strangers made fellowcitizens, born from above, one fold out of every nation &mdash; and how a man knows for certain that he is one of God's own.">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="favicon.png" sizes="192x192">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/theme.js"></script>
+  <script>
+    (function () { try {
+      var t = localStorage.getItem("coa-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {} })();
+  </script>
+  <script src="js/theme.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -43,17 +49,22 @@
         <p class="eyebrow">Our Citizens</p>
         <h1>Citizens of the kingdom</h1>
         <p class="lead">
-          The kingdom of God has its own citizens &mdash; born from above and written in the
-          Lamb's book of life. They are subjects of one King, stand under
-          his law, and are set in offices, each with its own work to further his kingdom.
+          The kingdom of God has its own citizens, and they are not made by birth. They are born
+          from above, gathered out of every nation under one Shepherd, and sent out into the world
+          as his ambassadors. This page is for anyone who is asking the only question that
+          matters: whether he is one of them.
         </p>
       </div>
     </section>
 
     <section class="banner">
       <div class="wrap">
-        <img class="banner-img" src="images/city-on-hill.jpg" width="1280" height="720"
-             alt="A hazy city skyline on green hills under a soft morning sky." loading="lazy" decoding="async">
+        <picture>
+          <source type="image/avif" srcset="images/town-in-the-valley-480.avif 480w, images/town-in-the-valley-960.avif 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <source type="image/webp" srcset="images/town-in-the-valley-480.webp 480w, images/town-in-the-valley-960.webp 960w" sizes="(min-width: 1152px) 1088px, 95vw">
+          <img class="banner-img" src="images/town-in-the-valley.jpg" width="1280" height="720"
+            alt="A town lying in a sunlit valley under a soft morning sky." loading="eager" fetchpriority="high" decoding="async">
+        </picture>
       </div>
     </section>
 
@@ -62,9 +73,11 @@
         <div class="feature-copy">
           <h2>Strangers made fellowcitizens</h2>
           <p>
-            By nature we were aliens, strangers to the covenants of promise, without hope.
-            But in Christ the stranger is brought near and given a place &mdash; no longer a
-            foreigner, but a fellowcitizen with the saints and of God's own household.
+            This is where all of them start, without exception. By nature we were foreigners
+            &mdash; having no covenant, no hope, and no God in the world. Nothing about a birth
+            certificate changes that. What changes it is Christ, who takes the stranger and gives
+            him a place, so that the man who belonged to no city now belongs to the household of
+            God and is numbered among its citizens.
           </p>
           <div class="verses verses-stack">
             <blockquote>
@@ -78,23 +91,37 @@
           </div>
         </div>
         <figure class="feature-art">
-          <img src="images/christ-returns.jpg" width="600" height="837"
-               alt="A depiction of Christ on a white horse." loading="lazy" decoding="async">
+          <picture>
+            <source type="image/avif" srcset="images/christ-with-a-staff-480.avif 480w, images/christ-with-a-staff-960.avif 960w" sizes="(min-width: 1152px) 516px, 95vw">
+            <source type="image/webp" srcset="images/christ-with-a-staff-480.webp 480w, images/christ-with-a-staff-960.webp 960w" sizes="(min-width: 1152px) 516px, 95vw">
+            <img src="images/christ-with-a-staff.jpg" width="900" height="1076"
+              alt="A painting of Christ as a young traveller, holding a pilgrim's staff." loading="lazy" decoding="async">
+          </picture>
         </figure>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="newbirth">
       <div class="wrap">
         <h2>Born again into the kingdom</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/baptism-of-christ-480.avif 480w, images/baptism-of-christ-960.avif 960w" sizes="(min-width: 1152px) 819px, 95vw">
+            <source type="image/webp" srcset="images/baptism-of-christ-480.webp 480w, images/baptism-of-christ-960.webp 960w" sizes="(min-width: 1152px) 819px, 95vw">
+            <img src="images/baptism-of-christ.jpg" width="1000" height="586"
+              alt="John wades into the river to baptize Christ, who stands with hands joined; angels look on above." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>The Baptism of Christ &mdash; Perugino (Pietro Vannucci), c. 1503</figcaption>
+        </figure>
         <p>
-          This citizenship is not inherited from the flesh but given in the new birth. As many as
-          receive him are given power to become the sons of God, and are translated into the
-          kingdom of his dear Son.
+          The citizen of this kingdom is not the man who was born into a decent family. He is the
+          man who was born a second time, into a family that does not die with the body. The
+          terms are severe because the thing being offered is worth more than a name: he is
+          translated out of the kingdom of darkness and set in the kingdom of the Son he loves.
         </p>
         <div class="verses">
-          <blockquote>
-            <p>&ldquo;Jesus answered and said unto him, Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.&rdquo;</p>
+          <blockquote class="verse-wide">
+            <p>&ldquo;Verily, verily, I say unto thee, Except a man be born again, he cannot see the kingdom of God.&rdquo;</p>
             <cite>John 3:3</cite>
           </blockquote>
           <blockquote>
@@ -109,41 +136,26 @@
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap">
-        <h2>By faith and promise</h2>
-        <p>
-          Abraham's children are those who believe in Christ Jesus. The covenant belongs to the children of promise.
-        </p>
-        <div class="verses">
-          <blockquote>
-            <p>&ldquo;Know ye therefore that they which are of faith, the same are the children of Abraham.&rdquo;</p>
-            <cite>Galatians 3:7</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;They which are the children of the flesh, these [are] not the children of God: but the children of the promise are counted for the seed.&rdquo;</p>
-            <cite>Romans 9:8</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;And if ye [be] Christ's, then are ye Abraham's seed, and heirs according to the promise.&rdquo;</p>
-            <cite>Galatians 3:29</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;Therefore it is of faith, that it might be by grace; to the end the promise might be sure to all the seed&hellip; which is of the faith of Abraham; who is the father of us all.&rdquo;</p>
-            <cite>Romans 4:16</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
+    <section class="section" id="onefold">
       <div class="wrap">
         <h2>One fold, out of every nation</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/baptism-of-the-eunuch-480.avif 480w, images/baptism-of-the-eunuch-960.avif 960w" sizes="(min-width: 1152px) 559px, 95vw">
+            <source type="image/webp" srcset="images/baptism-of-the-eunuch-480.webp 480w, images/baptism-of-the-eunuch-960.webp 960w" sizes="(min-width: 1152px) 559px, 95vw">
+            <img src="images/baptism-of-the-eunuch.jpg" width="1000" height="858"
+              alt="A figure reads aloud from an open book beside a chariot, while others draw near to hear." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>The Baptism of the Eunuch &mdash; Rembrandt van Rijn, c. 1626</figcaption>
+        </figure>
         <p>
-          God gathers his people from all nations into one fold under one shepherd. The tribes were scattered into the nations but are gathered back together so none are lost.
+          The Shepherd has other sheep. He says so himself, and he says he will go and get them,
+          and that when he has, there will be one fold and one shepherd. The citizenship does not
+          ask where you were born, what you were raised as, or which flag you carried. It asks one
+          question, and the answer to it is the same in every language.
         </p>
         <div class="verses">
-          <blockquote>
+          <blockquote class="verse-wide">
             <p>&ldquo;Other sheep I have, which are not of this fold: them also I must bring&hellip; and there shall be one fold, [and] one shepherd.&rdquo;</p>
             <cite>John 10:16</cite>
           </blockquote>
@@ -167,127 +179,86 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt" id="assurance">
       <div class="wrap">
-        <h2>A better country, a city to come</h2>
+        <p class="eyebrow">The question every man must answer</p>
+        <h2>How do you know that you are one of his?</h2>
         <p>
-          Here we are strangers and pilgrims. Our conversation is in heaven, our names written
-          in the Lamb's book of life, and God has prepared for his people a city.
-        </p>
-        <div class="verses">
-          <blockquote>
-            <p>&ldquo;For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ.&rdquo;</p>
-            <cite>Philippians 3:20</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;For here have we no continuing city, but we seek one to come.&rdquo;</p>
-            <cite>Hebrews 13:14</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;But now they desire a better [country], that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city.&rdquo;</p>
-            <cite>Hebrews 11:16</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;And there shall in no wise enter into it any thing that defileth, neither [whatsoever] worketh abomination, or [maketh] a lie: but they which are written in the Lamb's book of life.&rdquo;</p>
-            <cite>Revelation 21:27</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt">
-      <div class="wrap">
-        <h2>The Spirit of adoption</h2>
-        <p>
-          We do not enter this kingdom as slaves but as sons. The Spirit himself witnesses with our
-          spirit that we belong, and teaches us to cry, Abba, Father.
-        </p>
-        <div class="verses">
-          <blockquote>
-            <p>&ldquo;For ye have not received the spirit of bondage again to fear; but ye have received the Spirit of adoption, whereby we cry, Abba, Father.&rdquo;</p>
-            <cite>Romans 8:15</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;The Spirit itself beareth witness with our spirit, that we are the children of God.&rdquo;</p>
-            <cite>Romans 8:16</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section royal">
-      <div class="wrap">
-        <h2>Subjects of the King, and of his law</h2>
-        <p>
-          Citizenship in this kingdom is never freedom from authority &mdash; it is subjection to the one
-          authority. Its citizens are the King's subjects first and foremost, and the King's law is the
-          law they live under. Every ordinance they obey beneath him is an ordinance of his giving, and
-          the life they are called to is the life of obedience to him. 
+          Not by your opinion of yourself. The Bible leaves a man far more certain than that. It
+          tells him to look at three things: what the Spirit is doing in him, what the Word has
+          promised him, and what the Father has actually given him. These are not feelings, and
+          they are not the impressions of a mood. They are facts, and a man may take hold of them.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
-            <p>&ldquo;Submit yourselves to every ordinance of man for the Lord's sake: whether it be to the king, as supreme; or unto governors&hellip;&rdquo;</p>
-            <cite>1 Peter 2:13&ndash;14</cite>
+            <p>&ldquo;And hereby we know that he dwelleth in us, even by his Spirit; for his Spirit witnesseth with our spirit, that we are the children of God.&rdquo;</p>
+            <cite>1 John 3:24</cite>
           </blockquote>
-          <blockquote>
-            <p>&ldquo;But be ye doers of the word, and not hearers only, deceiving your own selves.&rdquo;</p>
-            <cite>James 1:22</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;And what nation [is] there so great, that hath statutes and judgments so righteous as all this law, which I set before you this day?&rdquo;</p>
-            <cite>Deuteronomy 4:8</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;Thy word is a lamp unto my feet, and a light unto my path.&rdquo;</p>
-            <cite>Psalm 119:105</cite>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap">
-        <h2>Dual citizenship is not allowed</h2>
-        <p>
-          This kingdom does not share its citizens with another. There is one King, one Lawgiver,
-          and one citizenship &mdash; and no man can serve two masters. An ambassador may travel to
-          any land, but his citizenship, his
-          belonging and his allegiance, is not divided: it is kept in heaven with the King. To
-          hold citizenship in two kingdoms at once is to halt between two opinions, and the
-          Scripture will not have it.
-        </p>
-        <div class="verses">
           <blockquote class="verse-wide">
-            <p>&ldquo;No man can serve two masters: for either he will hate the one, and love the other; or else he will hold to the one, and despise the other.&rdquo;</p>
-            <cite>Matthew 6:24</cite>
+            <p>&ldquo;But if we keep his commandments, we dwell in him, and he in us; and he dwelleth in us, by the Spirit that he hath given us.&rdquo;</p>
+            <cite>1 John 2:3</cite>
           </blockquote>
           <blockquote>
-            <p>&ldquo;A double minded man [is] unstable in all his ways.&rdquo;</p>
-            <cite>James 1:8</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;How long halt ye between two opinions? if the LORD [be] God, follow him.&rdquo;</p>
-            <cite>1 Kings 18:21</cite>
-          </blockquote>
-          <blockquote>
-            <p>&ldquo;Every kingdom divided against itself is brought to desolation; and every city or house divided against itself shall not stand:&rdquo;</p>
-            <cite>Matthew 12:25</cite>
+            <p>&ldquo;He that believeth on the Son hath life: and he that believeth not the Son shall not see life; but the wrath of God abideth on him.&rdquo;</p>
+            <cite>1 John 5:13</cite>
           </blockquote>
         </div>
         <p class="note">
-          One King. One law. One citizenship &mdash; and it is not of this world.
+          And if you would know what that faith looks like from the outside, we will tell you
+          plainly &mdash; it is on the next section, and it is the reason a stranger could tell.
         </p>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="fruit">
       <div class="wrap">
-        <h2>The offices he set in the church</h2>
+        <h2>Fruit is the evidence, never the price</h2>
         <p>
-          The offices of God's people are not invented by men. They are given by the physically ascended
-          King, and the letters of the apostles spell them out one by one &mdash; apostles,
-          prophets, evangelists, pastors and teachers, helps, governments &mdash; each with its
-          own work, and all for one end: the furthering of his kingdom.
+          Here is the thing that most people get backwards. A man hears &ldquo;the fruit of the
+          Spirit&rdquo; and assumes it is a scoreboard on which he earns a place. It is not. Fruit
+          cannot make a dead branch live; the vine does that. What fruit does is make a living
+          branch recognisable &mdash; to his neighbours, to the shepherds, and, we would add, to
+          himself on the ordinary days when nothing much seems to be happening.
+        </p>
+        <p>
+          So the question is never <em>have I earned enough?</em> The question is
+          <em>am I in Christ, and is he doing in me what he said he would do?</em> A saved man
+          who is a poor specimen will still be a son. A man who has never been changed at all will
+          have the words and never the fruit &mdash; and Christ says of such a man that he never
+          knew him.
+        </p>
+        <div class="verses">
+          <blockquote class="verse-wide">
+            <p>&ldquo;For we are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.&rdquo;</p>
+            <cite>Ephesians 2:10</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;Who gave himself for us, that he might redeem us from all iniquity, and purify unto himself a peculiar people, zealous of good works.&rdquo;</p>
+            <cite>Titus 2:14</cite>
+          </blockquote>
+        </div>
+        <p><a class="link-more" href="heritage.html#fruit">The nine fruits, one by one &rarr;</a></p>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="office">
+      <div class="wrap">
+        <h2>The offices he has given</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/christ-washing-his-disciples-feet-480.avif 480w, images/christ-washing-his-disciples-feet-960.avif 960w" sizes="(min-width: 1152px) 618px, 95vw">
+            <source type="image/webp" srcset="images/christ-washing-his-disciples-feet-480.webp 480w, images/christ-washing-his-disciples-feet-960.webp 960w" sizes="(min-width: 1152px) 618px, 95vw">
+            <img src="images/christ-washing-his-disciples-feet.jpg" width="1000" height="777"
+              alt="Christ kneels to wash a seated disciple's feet; the others wait in a lamplit room." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>Christ Washing the Disciples' Feet &mdash; Attributed to Jan Lievens, c. 1625</figcaption>
+        </figure>
+        <p>
+          A citizen of this kingdom is not merely a member of a congregation; he holds office. The
+          offices are not invented by men and they are not elected by a congregation. They are
+          given by the ascended King, and the letters of the apostles list them one by one. Each
+          has its own work, and every one of them exists for a single purpose &mdash; the edifying
+          of the body of Christ.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
@@ -298,19 +269,23 @@
             <p>&ldquo;And God hath set some in the church, first apostles, secondarily prophets, thirdly teachers, after that miracles, then gifts of healings, helps, governments, diversities of tongues.&rdquo;</p>
             <cite>1 Corinthians 12:28</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;And God hath made us sufficient ministers of the new testament; not of the letter, but of the spirit: for the letter killeth, but the spirit giveth life.&rdquo;</p>
+            <cite>2 Corinthians 3:6</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="bishops">
       <div class="wrap">
         <h2>Bishops, and deacons</h2>
         <p>
-          The letters name the standing offices of a local church and set out each man's task:
-          the bishop to hold the faithful word as the steward of God, the elder to feed the
-          flock of God, the deacon to serve grave and blameless. The office is not a rank to be
-          sought but a work to be done &mdash; and the man must be blameless in his own house
-          before he is set over the house of God.
+          The letters also name the standing offices of a local church and set out the character
+          each man must have before he is set over the house of God. A bishop is to be a steward
+          of God and a feeder of the flock, not a taskmaster. An elder is to lead willingly, not
+          for filthy lucre. A deacon is to be grave and honest and not a talker. The office is not
+          a rank to be sought; it is a work to be done, and the qualifications come first.
         </p>
         <div class="verses">
           <blockquote>
@@ -333,12 +308,49 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section section-alt" id="office-honour">
       <div class="wrap">
-        <h2>A chosen generation, a royal priesthood</h2>
+        <h2>An office that must be taken</h2>
         <p>
-          Every citizen is given a standing and a calling &mdash; a people taken out of darkness
-          that they might show forth the praises of him who called them into his marvellous light.
+          No man takes this honour to himself. It is called, appointed, and given. And because it
+          is given rather than assumed, it can be lost &mdash; not in theory, but on the record.
+          Judas held the office of an apostle and lost it. The servant who was given a talent and
+          did nothing with it was cast out. The mercy of God in such a case is not softness; it is
+          severity, and Scripture calls it both in the same breath.
+        </p>
+        <div class="verses">
+          <blockquote>
+            <p>&ldquo;And no man taketh this honour unto himself, but he that is called of God, as [was] Aaron.&rdquo;</p>
+            <cite>Hebrews 5:4</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;His bishoprick let another take.&rdquo;</p>
+            <cite>Acts 1:20</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;But the unprofitable servant was cast into outer darkness, where there is weeping and gnashing of teeth.&rdquo;</p>
+            <cite>Matthew 25:30</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;Behold therefore the goodness and severity of God: on them which fell, severity;&hellip; otherwise thou also shalt be cut off.&rdquo;</p>
+            <cite>Romans 11:22</cite>
+          </blockquote>
+        </div>
+        <p class="note">
+          An office held in this kingdom is held soberly, or it is held in vain.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="royal">
+      <div class="wrap">
+        <h2>A royal priesthood</h2>
+        <p>
+          Every citizen of this kingdom is set apart at once &mdash; a chosen generation, a royal
+          priesthood, an holy nation, a peculiar people. There is no rank above another man in
+          Christ, and there is no man too low to speak for the King. The call on such a life is
+          not to build something for yourself but to show forth the praises of him who called you
+          out of darkness into light.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
@@ -353,12 +365,14 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt" id="temple">
       <div class="wrap">
         <h2>Built together for an habitation of God</h2>
         <p>
-          This kingdom is not a scattered crowd but a temple under construction &mdash; every
-          citizen a living stone, joined and framed together in Christ by the Spirit.
+          This kingdom is not a scattered crowd. It is a temple under construction, and every
+          citizen is a living stone in it &mdash; fitted, joined, and framed together in Christ by
+          the Spirit. Which means the weakest stone is not surplus. A city that leaves out the
+          poor is not a city.
         </p>
         <div class="verses">
           <blockquote>
@@ -377,12 +391,14 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="not-of-world">
       <div class="wrap">
         <h2>Not of the world</h2>
         <p>
-          This citizenship sets us apart. The world may hate what it does not own, yet the child of
-          the kingdom belongs to another country and answers to a higher throne.
+          Citizenship of this kingdom costs you something, and the cost is the world's opinion.
+          The world does not attack what it owns; it hates what it does not own. So do not be
+          unsettled when belonging to Christ costs you the room you were standing in. The
+          alternative is to be comfortable in a country whose King you have refused.
         </p>
         <div class="verses">
           <blockquote>
@@ -393,19 +409,22 @@
             <p>&ldquo;I have given them thy word; and the world hath hated them, because they are not of the world, even as I am not of the world.&rdquo;</p>
             <cite>John 17:14</cite>
           </blockquote>
+          <blockquote>
+            <p>&ldquo;Whosoever therefore shall confess me before men, him will I also confess before my Father which is in heaven: and whosoever shall deny me before men, him will I also deny before my Father which is in heaven.&rdquo;</p>
+            <cite>Matthew 10:32</cite>
+          </blockquote>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section-alt" id="ambassador">
       <div class="wrap">
-        <h2>Citizenship is an office</h2>
+        <h2>An office of his own: ambassador</h2>
         <p>
-          Citizenship in this kingdom is not a membership a man holds for his own sake. It is a
-          public trust, an official office &mdash; and the citizen is a public servant of the
-          King. He is sent into a land not his own to speak for the throne that sent him: not
-          in his own name, but in the King's stead. The closest thing the Scripture calls this
-          office is an ambassador.
+          The nearest word Scripture has for what a citizen of this kingdom actually is, is
+          ambassador. A man sent into a country that is not his own, speaking for a throne that is
+          not his, carrying a message he did not compose. He is not a tourist. He does not speak
+          for himself, and he does not put his own name at the top of the letter.
         </p>
         <div class="verses">
           <blockquote class="verse-wide">
@@ -423,18 +442,90 @@
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="section" id="dual">
+      <div class="wrap">
+        <h2>One allegiance, and no second</h2>
+        <p>
+          This kingdom does not share its citizens with another. A man may travel to any land on
+          earth, and he may render there what is honestly owed there, but his belonging, his
+          treasure, and his heart are not divided; they are kept in heaven with the King. To hold
+          citizenship in two kingdoms at once is to halt between two opinions, and the Scripture
+          will not have it.
+        </p>
+        <div class="verses">
+          <blockquote class="verse-wide">
+            <p>&ldquo;No man can serve two masters: for either he will hate the one, and love the other; or else he will hold to the one, and despise the other.&rdquo;</p>
+            <cite>Matthew 6:24</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;A double minded man [is] unstable in all his ways.&rdquo;</p>
+            <cite>James 1:8</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;Every kingdom divided against itself is brought to desolation; and every city or house divided against itself shall not stand:&rdquo;</p>
+            <cite>Matthew 12:25</cite>
+          </blockquote>
+        </div>
+        <p class="note">
+          One King. One law. One citizenship &mdash; and it is not of this world.
+        </p>
+      </div>
+    </section>
+
+    <section class="section royal">
+      <div class="wrap">
+        <h2>Strangers still, and pilgrims</h2>
+        <figure class="section-art">
+          <picture>
+            <source type="image/avif" srcset="images/pilgrims-on-the-road-480.avif 480w, images/pilgrims-on-the-road-960.avif 960w" sizes="(min-width: 1152px) 613px, 95vw">
+            <source type="image/webp" srcset="images/pilgrims-on-the-road-480.webp 480w, images/pilgrims-on-the-road-960.webp 960w" sizes="(min-width: 1152px) 613px, 95vw">
+            <img src="images/pilgrims-on-the-road.jpg" width="1000" height="783"
+              alt="Two figures and a laden pack animal take a road between low trees under a broad sky." loading="lazy" decoding="async">
+          </picture>
+          <figcaption>On the Road &mdash; Jules Dupre, c. 1850</figcaption>
+        </figure>
+        <p>
+          Even here they do not arrive. Their names are written in another book, their
+          conversation is in heaven, and God has built a city for them that they have not yet
+          seen. Whatever city they sleep in tonight, it is not the one they belong to.
+        </p>
+        <div class="verses">
+          <blockquote>
+            <p>&ldquo;For our conversation is in heaven; from whence also we look for the Saviour, the Lord Jesus Christ.&rdquo;</p>
+            <cite>Philippians 3:20</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;For here have we no continuing city, but we seek one to come.&rdquo;</p>
+            <cite>Hebrews 13:14</cite>
+          </blockquote>
+          <blockquote>
+            <p>&ldquo;But now they desire a better [country], that is, an heavenly: wherefore God is not ashamed to be called their God: for he hath prepared for them a city.&rdquo;</p>
+            <cite>Hebrews 11:16</cite>
+          </blockquote>
+          <blockquote class="verse-wide">
+            <p>&ldquo;And there shall in no wise enter into it any thing that defileth, neither [whatsoever] worketh abomination, or [maketh] a lie: but they which are written in the Lamb's book of life.&rdquo;</p>
+            <cite>Revelation 21:27</cite>
+          </blockquote>
+        </div>
+        <p class="note">
+          He is the Spirit of adoption, and by him we cry, Abba, Father (Romans 8:15).
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt center">
       <div class="wrap center">
-        <h2>Come and be a citizen</h2>
+        <h2>Come and be received</h2>
         <p class="lead">
           The gate stands open to every nation. Come to the King, and be received.
         </p>
         <p class="hero-cta">
-          <a class="btn" href="benefits.html#contact">Application</a>
-          <a class="btn btn-ghost" href="heritage.html">Our heritage in Christ</a>
+          <a class="btn" href="benefits.html#contact">Apply here</a>
+          <a class="btn btn-ghost" href="heritage.html">What the inheritance is</a>
         </p>
       </div>
     </section>
+
     <section class="section faq">
       <div class="wrap">
         <h2>Questions on Our Citizens</h2>
@@ -443,11 +534,10 @@
             <summary>How does one become a citizen of the kingdom?</summary>
             <div class="faq-answer">
               <p>
-                Citizenship in this kingdom is a public office, and it has to be chosen for:
-                no man takes the honour to himself, but he is called and appointed by the
-                King. &ldquo;And no man taketh this honour unto himself, but he that is called
-                of God, as [was] Aaron&rdquo; (Hebrews 5:4); as many as receive him are given
-                power to become the sons of God (John 1:12) &mdash; 
+                By receiving him. The citizenship is not conferred by a congregation, a nation, or
+                a family tree; as many as receive him are given power to become the sons of God
+                (John 1:12), and citizenship follows the new birth (John 3:3). The public office that
+                goes with it is called, not taken (Hebrews 5:4).
               </p>
             </div>
           </details>
@@ -455,9 +545,10 @@
             <summary>Is there birthright citizenship?</summary>
             <div class="faq-answer">
               <p>
-                The children of the flesh are not the children of God; the children of the
-                promise are counted for the seed (Romans 9:8). God gathers his people out of every
-                kindred, and tongue, and people, and nation (Revelation 5:9).
+                No. The children of the flesh are not the children of God, and the promise is
+                counted for the seed (Romans 9:8). God gathers his people out of every kindred,
+                tongue, people, and nation (Revelation 5:9), so that no family may claim the
+                inheritance by descent and no family may be told it has none.
               </p>
             </div>
           </details>
@@ -465,13 +556,11 @@
             <summary>Can a citizen be cast out?</summary>
             <div class="faq-answer">
               <p>
-                Yes. An office in the kingdom of God is not held regardless of conduct: an
-                officeholder who is not acting accordingly can lose his office. Judas held the
-                office of an apostle and lost it &mdash; &ldquo;his bishoprick let another
-                take&rdquo; (Acts 1:20); the unprofitable servant was cast into outer darkness
-                (Matthew 25:30); and &ldquo;behold therefore the goodness and severity of God:
-                on them which fell, severity&hellip; otherwise thou also shalt be cut off&rdquo;
-                (Romans 11:22).
+                An office can be lost, and Scripture does not hide this. Judas lost his
+                bishoprick (Acts 1:20); the unprofitable servant was cast into outer darkness
+                (Matthew 25:30). Romans 11:22 puts it exactly: on them which fell, severity.
+                His people are kept by him (John 10:28) &mdash; but kept by a Shepherd, not by a
+                filing system.
               </p>
             </div>
           </details>
@@ -479,24 +568,10 @@
             <summary>Is dual citizenship allowed?</summary>
             <div class="faq-answer">
               <p>
-                No. &ldquo;No man can serve two masters&rdquo; (Matthew 6:24), and &ldquo;a
-                double minded man [is] unstable in all his ways&rdquo; (James 1:8). A citizen
-                of this kingdom may sojourn in any land and render what is obligated there, but
-                his citizenship is one &mdash; with the King &mdash; for &ldquo;every kingdom
-                divided against itself is brought to desolation&rdquo; (Matthew 12:25).
-              </p>
-            </div>
-          </details>
-          <details class="faq-item">
-            <summary>Are there offices among God's people?</summary>
-            <div class="faq-answer">
-              <p>
-                Yes. The letters spell them out: &ldquo;And he gave some, apostles; and some,
-                prophets; and some, evangelists; and some, pastors and teachers&rdquo;
-                (Ephesians 4:11); &ldquo;with the bishops and deacons&rdquo; (Philippians 1:1);
-                &ldquo;helps, governments&rdquo; (1 Corinthians 12:28). Every office is given
-                &ldquo;for the perfecting of the saints, for the work of the ministry, for the
-                edifying of the body of Christ&rdquo; (Ephesians 4:12).
+                No. &ldquo;No man can serve two masters&rdquo; (Matthew 6:24), and a double-minded
+                man is unstable in all his ways (James 1:8). A citizen may sojourn in any land
+                and render what is honestly obligated there, but his citizenship is one &mdash;
+                with the King.
               </p>
             </div>
           </details>
@@ -504,11 +579,23 @@
             <summary>Must a man be qualified for office?</summary>
             <div class="faq-answer">
               <p>
-                Yes. The letters set the qualifications with the offices: &ldquo;A bishop then
-                must be blameless, the husband of one wife, vigilant, sober, of good behaviour,
-                given to hospitality, apt to teach&rdquo; (1 Timothy 3:2); and the work is
-                committed to &ldquo;faithful men, who shall be able to teach others also&rdquo;
-                (2 Timothy 2:2).
+                Yes, and the qualifications precede the calling. &ldquo;A bishop then must be
+                blameless, the husband of one wife, vigilant, sober, of good behaviour, given to
+                hospitality, apt to teach&rdquo; (1 Timothy 3:2); and the work is committed to
+                &ldquo;faithful men, who shall be able to teach others also&rdquo; (2 Timothy 2:2).
+              </p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Does everyone who believes belong here?</summary>
+            <div class="faq-answer">
+              <p>
+                Believing is the beginning of citizenship, not the end of it. Christ distinguishes
+                sharply between the man who calls on him and the man who does the will of his
+                Father; on that day he will confess to some, &ldquo;I never knew you: depart from me,
+                ye that work iniquity&rdquo; (Matthew 7:23). Faith that has never borne fruit was
+                never the faith of his family. We say more about that on
+                <a href="heritage.html#fruit">Our Heritage</a>.
               </p>
             </div>
           </details>
@@ -521,7 +608,7 @@
     <div class="wrap footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img class="footer-seal" src="images/manorska-seal.png" alt="Seal of the Manorska Republic" width="64" height="64" loading="lazy" decoding="async">
+          <img class="footer-seal" src="images/maspor-seal.png" alt="Seal of the Manorska Republic" width="150" height="150" loading="lazy" decoding="async">
           <p class="footer-title">Maspor</p>
           <p class="footer-official">The official website of Maspor</p>
           <p class="footer-tag">One family of faith, gathered out of every nation.</p>
@@ -536,7 +623,7 @@
         </nav>
       </div>
       <div class="footer-bottom">
-        <p class="footer-verse">&ldquo;For the LORD [is] our judge, the LORD [is] our lawgiver, the LORD [is] our king; he will save us.&rdquo; &mdash; Isaiah 33:22</p>
+        <p class="footer-verse">&ldquo;For it is time for judgment to begin at the household of God: and if [it begin] first at us, what shall become of them that obey not the gospel of God?&rdquo; &mdash; 1 Peter 4:17</p>
         <p class="footer-credit">We hold the King James (Authorized) Version to be the infallible word of God. Scripture quotations are from it, public domain.</p>
       </div>
     </div>

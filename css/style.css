@@ -82,7 +82,6 @@ body {
   font-family: ui-serif, Georgia, "Times New Roman", serif;
   font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   transition: background-color .25s ease, color .25s ease;
 }
@@ -93,10 +92,28 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
   color: var(--ink);
 }
-
 p {
   margin: 0 0 1rem;
 }
+
+picture {
+  display: contents;
+}
+
+/* Reading measure.
+   The wrap is 68rem so banners, plates and the two-column feature grids can use
+   the full width. Left alone, the prose inherits it too and runs to roughly 140
+   characters a line at desktop — about twice the 90 that is the practical ceiling
+   for sustained reading. Cap the prose only, in rem so it holds the same measure
+   whichever serif in the stack actually renders. 34rem is ~69 characters. */
+.section .wrap > p,
+.faq-answer p,
+.affirmation p,
+.aff-parts p,
+.section.center blockquote {
+  max-width: 34rem;
+}
+
 
 a {
   color: var(--accent);
@@ -333,6 +350,9 @@ blockquote {
 
 blockquote.verse-wide {
   grid-column: 1 / -1;
+  max-width: 40rem;
+  width: 100%;
+  justify-self: center;
 }
 
 blockquote p {
@@ -558,7 +578,6 @@ blockquote cite {
   gap: clamp(1.5rem, 5vw, 3.5rem);
 }
 
-.feature.flip .feature-art,
 .feature-flip .feature-art {
   order: -1;
 }
@@ -575,6 +594,30 @@ blockquote cite {
   box-shadow: var(--shadow);
 }
 
+/* Section plate — an artwork set under a heading, never cropped */
+.section-art {
+  margin: 1.4rem 0 1.75rem;
+  text-align: center;
+}
+
+.section-art img {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 30rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section-art figcaption {
+  margin-top: .6rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
 .verses-stack {
   grid-template-columns: 1fr;
 }
@@ -585,21 +628,47 @@ blockquote cite {
   text-decoration: none;
 }
 
-/* Belief blocks */
-.belief {
-  max-width: 62ch;
-  margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+/* Fruit of the Spirit */
+.fruit-list {
+  list-style: none;
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
 }
 
-.belief:last-child {
-  margin-bottom: 0;
+.fruit-list li {
+  background: var(--surface);
+  padding: clamp(1.1rem, 2.5vw, 1.6rem);
 }
 
-.belief h2 {
-  font-size: clamp(1.3rem, 1.05rem + 1vw, 1.7rem);
+.fruit-list strong {
+  display: block;
+  font-size: 1.05rem;
+  letter-spacing: .01em;
+  margin-bottom: .4rem;
+  color: var(--accent);
 }
 
-.belief p {
+.fruit-list span {
+  display: block;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.fruit-list cite {
+  display: block;
+  margin-top: .6rem;
+  font-size: .78rem;
+  font-style: normal;
+  letter-spacing: .06em;
+  text-transform: uppercase;
   color: var(--ink-soft);
 }
 
@@ -624,10 +693,35 @@ blockquote cite {
 
 .contact-list span {
   display: inline-block;
-  min-width: 5rem;
+  min-width: 7rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-weight: 600;
   color: var(--ink-soft);
+}
+
+.contact-list .bch-address {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .82rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.contact-list .copy-btn {
+  margin-left: .6rem;
+  padding: .15rem .5rem;
+  font: inherit;
+  font-size: .75rem;
+  color: var(--ink-soft);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.contact-list .copy-btn:hover {
+  color: var(--ink);
+  border-color: var(--ink-soft);
 }
 
 .contact-form {
@@ -711,10 +805,6 @@ blockquote cite {
   .contact-grid {
     grid-template-columns: 1fr;
     text-align: left;
-  }
-
-  .feature-flip .feature-art {
-    order: -1;
   }
 }
 
@@ -920,4 +1010,205 @@ blockquote cite {
   margin-top: 1.25rem;
   color: var(--ink-soft);
   font-size: .95rem;
+}
+
+/* Horizontal escape hatch for the table before it becomes cards */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll .signature-table {
+  min-width: 34rem;
+}
+
+/* Affidavit */
+.aff-number {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 .45rem;
+}
+
+.aff-parts {
+  margin-top: 1.75rem;
+}
+
+.aff-parts h3 {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  margin: 1.75rem 0 .5rem;
+  padding-top: .4rem;
+  border-top: 1px solid var(--line);
+}
+
+.aff-parts h3:first-child {
+  margin-top: 0;
+  border-top: 0;
+  padding-top: 0;
+}
+
+.aff-parts > p {
+  margin-bottom: 1rem;
+  color: var(--ink-soft);
+}
+
+.affirmation {
+  margin-top: 2rem;
+  padding: 1.5rem 1.6rem 1.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.affirmation-title {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 .9rem;
+}
+
+.affirmation p {
+  margin: 0 0 1rem;
+}
+
+.affirmation-rule {
+  height: 0;
+  border-top: 1px solid var(--ink);
+  margin: 1.6rem 0 1rem !important;
+  max-width: 22rem;
+}
+
+.affirmation-meta {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .88rem;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 !important;
+}
+
+@media (max-width: 40rem) {
+  .affirmation {
+    padding: 1.25rem 1.15rem 1.35rem;
+  }
+}
+
+/* Command block */
+.command {
+  margin: 1.75rem 0;
+  padding: 1.15rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: .9rem;
+  line-height: 1.85;
+  color: var(--ink);
+  tab-size: 2;
+}
+
+.command code {
+  font: inherit;
+  background: none;
+  padding: 0;
+}
+
+.cmd-out {
+  display: block;
+  color: var(--accent);
+}
+
+.cmd-out::before {
+  content: "↳ ";
+  opacity: .65;
+}
+
+@media (max-width: 40rem) {
+  .command {
+    font-size: .76rem;
+    line-height: 1.75;
+    padding: 1rem .85rem;
+  }
+}
+
+/* The signature table becomes a stack of cards, so no cell is ever
+   forced off the edge of a phone screen. */
+@media (max-width: 40rem) {
+  .table-scroll .signature-table {
+    min-width: 0;
+  }
+
+  .signature-table caption {
+    display: block;
+    padding-bottom: 1rem;
+  }
+
+  .signature-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .signature-table,
+  .signature-table tbody,
+  .signature-table tr,
+  .signature-table th,
+  .signature-table td {
+    display: block;
+    width: auto;
+  }
+
+  .signature-table tr {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: .9rem 1rem 1rem;
+    margin-bottom: .8rem;
+  }
+
+  .signature-table tbody th {
+    border-bottom: 1px solid var(--line);
+    padding: 0 0 .55rem;
+    margin-bottom: .3rem;
+    line-height: 1.45;
+  }
+
+  .signature-table td {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    border-bottom: 0;
+    padding: .32rem 0;
+  }
+
+  .signature-table td::before {
+    content: attr(data-label);
+    flex: 0 0 auto;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .72rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .signature-table .sig-count,
+  .signature-table .sig-mark {
+    white-space: normal;
+    text-align: right;
+  }
 }
