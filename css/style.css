@@ -335,7 +335,7 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
   gap: 1.25rem;
-  margin-top: 1.75rem;
+  margin-block: 1.75rem;
 }
 
 blockquote {
@@ -705,6 +705,11 @@ blockquote cite {
   line-height: 1.5;
   overflow-wrap: anywhere;
   user-select: all;
+  color: var(--ink);
+}
+
+.contact-list .bch-address:hover {
+  color: var(--accent);
 }
 
 .contact-list .copy-btn {
@@ -942,6 +947,21 @@ blockquote cite {
   width: 180px;
   height: auto;
   margin-top: .85rem;
+}
+
+.bch-logo-link {
+  display: inline-block;
+  margin-top: .85rem;
+  border-radius: var(--radius);
+}
+
+.bch-logo-link .bch-logo {
+  margin-top: 0;
+}
+
+.bch-logo-link:hover .bch-logo,
+.bch-logo-link:focus-visible .bch-logo {
+  opacity: .82;
 }
 
 .faq-answer blockquote {

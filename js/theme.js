@@ -67,7 +67,7 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         var data = new FormData(form);
-        var subject = "Application to Maspor";
+        var subject = "Registration for Maspor";
         var body =
           "Name: " + (data.get("name") || "") + "\n" +
           "Email: " + (data.get("email") || "") + "\n\n" +
