@@ -96,6 +96,15 @@ p {
   margin: 0 0 1rem;
 }
 
+/* Inline code — mostly DNS and IPv6 addresses, which must be transcribed
+   exactly, so they are set monospaced rather than in the proportional serif.
+   .command code resets this further down for the terminal blocks. */
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .9em;
+  overflow-wrap: anywhere;
+}
+
 picture {
   display: contents;
 }
@@ -672,6 +681,42 @@ blockquote cite {
   color: var(--ink-soft);
 }
 
+/* A set of points in a grid of their own cards. Unlike .fruit-list this is a
+   plain grid, so the last row never leaves an empty cell showing the rule
+   colour through where a missing item would be. */
+.rule-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+  padding: 0;
+}
+
+.rule-list li {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.15rem 1.3rem;
+  box-shadow: var(--shadow);
+}
+
+.rule-list strong {
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.02rem;
+  letter-spacing: .01em;
+  margin-bottom: .45rem;
+  color: var(--accent);
+}
+
+.rule-list span {
+  display: block;
+  font-size: .95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
 /* Contact */
 .contact-grid {
   display: grid;
@@ -1231,4 +1276,121 @@ blockquote cite {
     white-space: normal;
     text-align: right;
   }
+}
+
+/* Codes and regulations — the counsels we have set down, each written out in
+   full and numbered as it is issued */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+/* A post card is a plate, not a link. Only the heading and the closing line are
+   links, so that a browser or accessibility setting which underlines every
+   link underlines two words rather than the whole card, and so that a screen
+   reader does not announce the entire block as one link. */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-soft);
+  box-shadow: 0 1px 2px rgba(36, 31, 24, .06), 0 12px 32px rgba(36, 31, 24, .12);
+}
+
+.post-card .card-art {
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--surface-alt);
+}
+
+.post-card .card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.35rem 1.4rem;
+}
+
+.post-card .card-body h3 {
+  margin: 0 0 .55rem;
+  font-size: 1.15rem;
+}
+
+.post-card .card-body p {
+  margin: 0 0 .6rem;
+  color: var(--ink-soft);
+  font-size: .98rem;
+}
+
+/* The heading link takes the heading's own colour, so the card reads as a card
+   and only marks itself as a link on hover. */
+.post-card .card-body h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post-card .card-body h3 a:hover,
+.post-card .card-body h3 a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.post-card .post-more {
+  display: block;
+  margin: auto 0 0;
+  padding-top: .6rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.post-card .post-more:hover,
+.post-card .post-more:focus-visible {
+  text-decoration: underline;
+}
+
+.post-meta {
+  display: block;
+  margin: 0 0 .5rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.post-meta .post-no {
+  color: var(--accent);
+}
+
+/* An article under the section that lists it */
+.post-head .post-meta {
+  margin-bottom: 1.25rem;
+}
+
+.post-foot {
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
 }

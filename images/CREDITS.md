@@ -54,6 +54,16 @@ Licence: public domain, via Art Institute of Chicago Open Access
 (<https://api.artic.edu/api/v1/artworks/>). Object numbers are given so any claim
 here can be checked against the source rather than taken on trust.
 
+## Artwork for the codes and regulations, October 2026
+
+Two further public-domain works, fetched over the same IIIF endpoint and treated
+exactly as the plates above.
+
+| File | Work | Collection | Object |
+| --- | --- | --- | --- |
+| `keeper-of-the-flock.jpg` | Jean-François Millet, *The Keeper of the Flock* | Art Institute of Chicago | 4776 |
+| `the-tribute-money.jpg` | Rembrandt van Rijn, *The Tribute Money*, c. 1634, etching | Art Institute of Chicago | 29277 |
+
 ## Remaining artwork
 
 `images/maspor-seal.png` is a coat of arms bearing the words **REPUBLIKA MANORSKA**.
