@@ -145,13 +145,33 @@ it opens rather than to fill a slot.
 - **404** — mist closing over hills at sunset, under the page's heading "A word for
   the way."
 
-## Remaining artwork
+## The arms of Maspor
 
-`images/maspor-seal.png` is a coat of arms bearing the words **REPUBLIKA MANORSKA**.
-It is *not* the arms of Maspor. It was carried over from earlier material and does
-not match the site it appears on. The file is named for the site, but the alt text
-describes what the image actually shows, so screen readers are not misled. It should
-be replaced with genuine arms before this site represents itself as a government.
+`images/maspor-arms.svg` is our own work: the arms of this site, drawn for it.
+The earlier `maspor-seal.png` bearing **REPUBLIKA MANORSKA** was not the arms of
+Maspor, and has been deleted. `maspor-seal.png` is now rendered from the SVG at
+256x256 for the footer, which displays it at 64px.
+
+**Blazon.** Azure, a cross Argent upon an open book bound Or; the shield surmounted
+by an open crown Or, and a scroll Gules bearing the motto in letters Or.
+
+**The elements, and why they are there.**
+
+- *Azure*, the ordinary blue of loyalty, for a kingdom that claims no loyalty
+  whatever but its King's.
+- *A cross Argent* — white, "without spot" — carrying the site's existing mark,
+  the cross already used for the favicon and the header.
+- *An open book* at the foot of the cross: the Word, and the office of the
+  lawgiver. The cross stands on the book rather than displacing it.
+- *An open crown* above the shield: the King. Its arches spring behind the points
+  and meet under a monde and cross, so that even the crown is ranked under a
+  cross.
+- *The motto*, **JUDGE · LAWGIVER · KING**, from Isaiah 33:22 — the verse already
+  printed in the footer of every page, and the threefold shape of the site: Our
+  Government, Our Charter, Our King.
+
+These are the arms of Maspor as this site defines itself. They are not a grant
+from any heraldic authority, and no such authority has been asked.
 
 ## Bitcoin Cash badges
 

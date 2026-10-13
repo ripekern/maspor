@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-labelledby="t d">
+  <title id="t">Arms of Maspor</title>
+  <desc id="d">An open crown Or above a shield Azure bearing a slender cross Argent upon an open book, with a motto scroll below.</desc>
+
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eacb62"/>
+      <stop offset=".5" stop-color="#cda62a"/>
+      <stop offset="1" stop-color="#9a7a1a"/>
+    </linearGradient>
+    <linearGradient id="azure" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#27558a"/>
+      <stop offset="1" stop-color="#14325a"/>
+    </linearGradient>
+    <linearGradient id="argent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eae2d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ==== open crown ==== -->
+  <g>
+    <!-- arches -->
+    <path d="M222 88 C222 42 250 28 300 28 C350 28 378 42 378 88"
+          fill="none" stroke="url(#gold)" stroke-width="11" stroke-linecap="round"/>
+    <!-- points -->
+    <path d="M212 86 L226 46 L240 86 Z" fill="url(#gold)"/>
+    <path d="M249 86 L263 40 L277 86 Z" fill="url(#gold)"/>
+    <path d="M286 86 L300 34 L314 86 Z" fill="url(#gold)"/>
+    <path d="M323 86 L337 40 L351 86 Z" fill="url(#gold)"/>
+    <path d="M360 86 L374 46 L388 86 Z" fill="url(#gold)"/>
+    <!-- pearls -->
+    <g fill="url(#gold)" stroke="#8a6d15" stroke-width="2">
+      <circle cx="226" cy="45" r="8"/><circle cx="263" cy="39" r="8"/>
+      <circle cx="300" cy="33" r="8"/><circle cx="337" cy="39" r="8"/>
+      <circle cx="374" cy="45" r="8"/>
+    </g>
+    <!-- band -->
+    <rect x="196" y="84" width="208" height="38" rx="5" fill="url(#gold)" stroke="#8a6d15" stroke-width="3"/>
+    <rect x="210" y="97" width="180" height="6" rx="3" fill="#8a6d15" opacity=".5"/>
+    <!-- rim -->
+    <rect x="188" y="118" width="224" height="13" rx="6" fill="url(#gold)" stroke="#8a6d15" stroke-width="3"/>
+    <!-- monde and cross -->
+    <circle cx="300" cy="28" r="12" fill="url(#gold)" stroke="#8a6d15" stroke-width="3"/>
+    <path d="M300 6 L300 24 M291 15 L309 15" stroke="#eacb62" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- ==== shield ==== -->
+  <path d="M158 118 L442 118 L442 300 C442 376 378 432 300 470 C222 432 158 376 158 300 Z"
+        fill="url(#azure)" stroke="url(#gold)" stroke-width="7" stroke-linejoin="round"/>
+
+  <!-- slender cross argent -->
+  <path d="M289 148 L311 148 L311 204 L412 204 L412 226 L311 226 L311 350 L289 350 L289 226 L188 226 L188 204 L289 204 Z"
+        fill="url(#argent)"/>
+
+  <!-- open book in base, sized to sit inside the shield's curve -->
+  <g>
+    <path d="M300 370 L222 356 L222 404 L300 418 Z" fill="url(#gold)" stroke="#8a6d15" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M300 370 L378 356 L378 404 L300 418 Z" fill="url(#gold)" stroke="#8a6d15" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M300 365 L230 352 L230 397 L300 411 Z" fill="#fdfbf6"/>
+    <path d="M300 365 L370 352 L370 397 L300 411 Z" fill="#fdfbf6"/>
+    <path d="M300 365 L300 411" stroke="#c09c20" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#c3b8a2" stroke-width="4" stroke-linecap="round">
+      <path d="M244 363 L244 388"/><path d="M266 367 L266 392"/>
+      <path d="M356 363 L356 388"/><path d="M334 367 L334 392"/>
+    </g>
+  </g>
+
+  <!-- ==== motto scroll ==== -->
+  <g>
+    <path d="M58 492 L14 476 L14 566 L58 550 Z" fill="#5e1717"/>
+    <path d="M542 492 L586 476 L586 566 L542 550 Z" fill="#5e1717"/>
+    <path d="M58 492 L542 492 L542 550 L58 550 Z" fill="#7a1f1f"/>
+    <path d="M58 492 L542 492 L542 550 L58 550 Z" fill="none" stroke="url(#gold)" stroke-width="4"/>
+    <text x="300" y="532" text-anchor="middle" textLength="420" lengthAdjust="spacingAndGlyphs"
+          font-family="Georgia, 'Nimbus Roman', 'Times New Roman', serif" font-size="40"
+          font-weight="700" fill="#ecd897">JUDGE &#183; LAWGIVER &#183; KING</text>
+  </g>
+</svg>
