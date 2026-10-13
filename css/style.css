@@ -544,16 +544,27 @@ blockquote cite {
 
 .card-art {
   margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
   background: var(--surface-alt);
 }
 
+/* The plate keeps the 16/10 crop itself, so a caption can sit below it
+   instead of being clipped by the card's overflow. `height: auto` lets
+   aspect-ratio drive the box; without it the presentational height
+   attribute wins and the crop is lost. */
 .card-art img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
+}
+
+.card-art figcaption {
+  padding: .6rem 1.35rem 0;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .74rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
 }
 
 .card-body {
@@ -601,6 +612,15 @@ blockquote cite {
   height: auto;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.feature-art figcaption {
+  margin-top: .6rem;
+  text-align: center;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
 }
 
 /* Section plate — an artwork set under a heading, never cropped */
@@ -1311,14 +1331,13 @@ blockquote cite {
 
 .post-card .card-art {
   margin: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
   background: var(--surface-alt);
 }
 
 .post-card .card-art img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
 }

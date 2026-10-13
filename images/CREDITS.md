@@ -1,15 +1,12 @@
 # Image credits
 
-The KJV quotations are public domain (see the footer of every page). The photographs
-and paintings below are not all our own work; here is where each one came from.
+The KJV quotations are public domain (see the footer of every page). The paintings
+and manuscripts below are not our own work; here is where each one came from.
 
 ## Public domain / CC0
 
-The banner photographs (`hills-in-golden-light`, `peaks-above-the-clouds`,
-`valley-at-sunset`, `town-in-the-valley`, `wheat-field-at-sunset`, `forest-in-mist`,
-`bible-open-by-the-water`, `sunrise-over-the-ridge`, `shepherd-and-lamb`, `tiara`,
-`bible-king-james`) are unsourced. Where they came from is not recorded and should
-be — they are the one part of this directory whose provenance is unknown.
+Every image in this directory now has recorded provenance. Nothing here is of
+unknown origin.
 
 | File | Source | Licence |
 | --- | --- | --- |
@@ -64,6 +61,90 @@ exactly as the plates above.
 | `keeper-of-the-flock.jpg` | Jean-François Millet, *The Keeper of the Flock* | Art Institute of Chicago | 4776 |
 | `the-tribute-money.jpg` | Rembrandt van Rijn, *The Tribute Money*, c. 1634, etching | Art Institute of Chicago | 29277 |
 
+## Replacements for the unsourced photographs, October 2026
+
+Three pictures used under headings were photographs of unknown provenance, with no
+caption and nothing to trace them by: a studio photograph of a jewelled diadem
+(`tiara`), a hazy sunrise landscape (`sunrise-over-the-ridge`), and a stylised image
+of a shepherd holding a lamb (`shepherd-and-lamb`). They have been replaced with
+named public-domain artworks, each carrying a caption on the page. All three are
+`is_public_domain: true` in the API and were downloaded over the IIIF endpoint,
+then reduced to 1000px on the long edge like the plates above.
+
+| File | Work | Collection | Object |
+| --- | --- | --- | --- |
+| `coronation-of-otto-the-great.jpg` | Johann Christoph Storer, *The Coronation of Otto the Great in the Church of Saint'Ambrogio, Milan*, 1650, drawing and watercolour | Art Institute of Chicago | 185149 |
+| `the-song-of-the-lark.jpg` | Jules Breton, *The Song of the Lark*, 1884, oil on canvas | Art Institute of Chicago | 94841 |
+| `the-good-shepherd.jpg` | Thomas Cole, *The Good Shepherd*, 1849, lithograph | Art Institute of Chicago | 121829 |
+
+The lithograph is trimmed to the printed plate. Cole's sheet carries wide blank
+paper margins and an engraved title beneath the image; both are part of the sheet as
+bound, not part of the picture, and the page now supplies the caption the paper
+would otherwise have carried.
+
+### Why these three
+
+Each was chosen to fit the heading it sits under, not merely to fill a slot.
+
+- *The Coronation of Otto the Great* stands beside "Submit for conscience' sake".
+  It shows the crown of authority being laid on a kneeling man by a churchman — the
+  meeting of divine ordinance and earthly office the passage turns on. Its warm
+  monochrome also sits comfortably beside the site's parchment palette.
+- *The Song of the Lark* stands beside "Righteousness exalteth a nation". A field
+  under a rising sun, and a labourer standing up to it at the day's beginning.
+- *The Good Shepherd* stands beside "One family, gathered out of every nation". The
+  shepherd, his flock and the lost sheep are the figures the heading is drawing on.
+
+The old `sunrise-over-the-ridge` file had no `-960` derivative, so the page could
+only ever offer it at 480w; the replacements all derive cleanly at both widths.
+
+## Page banners, October 2026
+
+The seven banner photographs were the last images on the site of unknown
+provenance: generic stock landscapes of hills, valleys, fields and mist, with
+nothing to trace them by. Each has been replaced with a named public-domain
+artwork chosen for the page it opens. As with the plates above, all are
+`is_public_domain: true` in the Art Institute of Chicago API and were downloaded
+over the IIIF endpoint.
+
+| File | Work | Page | Object |
+| --- | --- | --- | --- |
+| `italian-landscape-with-travelers.jpg` | Jan Both, *Italian Landscape with Travelers*, c. 1650, oil on canvas | Our Government | 69041 |
+| `an-alpine-scene.jpg` | Gustave Courbet, *An Alpine Scene*, 1874, oil on canvas | Our King | 39554 |
+| `decretalium-manuscript-leaf.jpg` | French (likely Toulouse), *Table of Bigamy, from the Summa Super Titulis Decretalium Completa*, 1275/99, tempera and gold | Our Charter | 2174 |
+| `auvers-panoramic-view.jpg` | Paul Cézanne, *Auvers, Panoramic View*, 1873–75, oil on canvas | Our Citizens | 14556 |
+| `landscape-with-st-jerome.jpg` | Belgian (Antwerp), *Landscape with the Penitent Saint Jerome*, 1530–40, oil on panel | Our Heritage | 111453 |
+| `the-harvesters.jpg` | Léon Augustin Lhermitte, *The Harvesters*, 1888–89, oil on canvas | Our Benefits | 111746 |
+| `mist-rising-in-the-catskills.jpg` | Sanford Robinson Gifford, *Mist Rising at Sunset in the Catskills*, c. 1861, oil on canvas | 404 | 71971 |
+
+The two code pages already used named artworks as their banners
+(`keeper-of-the-flock`, `the-tribute-money`) and were left alone.
+
+Banners are decorative: they carry alt text but no visible caption, matching how
+the artworks already used as banners are treated. Each is cropped to 16:9 and
+reduced to 1280px on the long edge.
+
+### Why these seven
+
+The banner is the first thing a visitor sees, so each was chosen against the page
+it opens rather than to fill a slot.
+
+- **Our Government** — travellers moving through an ordered, inhabited landscape.
+- **Our King** — snow-capped peaks above a village; height, permanence, dominion.
+- **Our Charter** — a leaf of thirteenth-century canon law. The page turns on "there
+  is but one Lawgiver, and his law stands", and this is a literal written law of the
+  period. Cropped to a horizontal band it reads as a strip of script with the
+  illuminated figure at its centre; the rest of the leaf stays below the crop.
+- **Our Citizens** — a village seen whole from above: one fold, one roofscape, out
+  of every nation.
+- **Our Heritage** — a wide world of lakes and towns with a small penitent figure in
+  the foreground. "An heir, and not a spectator": the inheritance is everything
+  that spreads out beyond him.
+- **Our Benefits** — harvesters binding sheaves at the day's height. "He daily
+  loadeth us with benefits."
+- **404** — mist closing over hills at sunset, under the page's heading "A word for
+  the way."
+
 ## Remaining artwork
 
 `images/maspor-seal.png` is a coat of arms bearing the words **REPUBLIKA MANORSKA**.
@@ -80,11 +161,18 @@ carried as unused weight.
 
 ## Derived files
 
-Every photograph above is also generated at two widths in AVIF and WebP
-(`name-480.*`, `name-960.*`), referenced from `<picture>` with the original JPEG as
-the fallback. The originals are kept at full size and remain the correct file to
-edit: re-derive from them rather than from a derivative. All three formats are
-re-encoded without an ICC profile and, for JPEG, progressively.
+Every image above is also generated at two sizes in AVIF and WebP (`name-480.*`,
+`name-960.*`), referenced from `<picture>` with the original JPEG as the fallback.
+There are two conventions, and they differ:
+
+- **Figures** (`section-art`, `card-art`, `feature-art`) key the two sizes to the
+  **long edge**. A portrait master gives a `-480` file narrower than 480px.
+- **Banners** key the two sizes to the **width**, so a `-480` banner is exactly
+  480px wide. Banners are 16:9, so `-480` is 480x270 and `-960` is 960x540.
+
+The originals are the correct file to edit: re-derive from them rather than from a
+derivative. All three formats are re-encoded without an ICC profile and, for JPEG,
+progressively.
 
 ## Removed
 
