@@ -1,0 +1,171 @@
+# Working notes for this site
+
+Things that are not obvious from the code, and that cost time to work out.
+Written October 2026.
+
+## Verifying Scripture quotations
+
+**Use `purebible`, which is installed, before shipping any quotation.** Do not
+quote from memory and do not trust a general-purpose Bible API for this.
+
+```
+purebible lookup --no-color "Acts 17:24"     # exact text of a verse or range
+purebible search --count "LORD"              # count an occurrence
+purebible search --gospels "love"             # scope: --law --prophets --ot --nt --gospels --letters
+```
+
+Flags go **before** the reference. `purebible lookup "Acts 17:24" --no-color`
+fails with `not a reference` — put the option first.
+
+Database 1 is the **KJV 1769** (King James Pure Bible). Source:
+<https://github.com/ripekern/purebible-py>. The full text file is
+`SW1769Bible_both.txt`.
+
+### Why this matters, and what went wrong once
+
+Ten of thirteen quotations in the first draft of `code-licensing.html` were
+wrong. The errors were not typos — they were plausible-sounding misrememberings
+that read like KJV:
+
+- `Acts 2:4` was given as "filled with the Holy Ghost, and spake boldly". That
+  clause is **Acts 4:31**; Acts 2:4 reads "and began to speak with other tongues".
+  The verse number was right and the wording was borrowed from a different verse.
+- `1 Corinthians 3:23` was given as "Ye are the world's; ye are not your own." The
+  verse is "And ye are Christ's; and Christ's [is] God's." The quote is real, from
+  the *previous* verse.
+- `Galatians 5:1` was given as "Stand ye in the liberty..." — that is not this
+  verse in this translation.
+- `John 11:25` was "believeth **on** me"; the KJV reads "believeth **in** me".
+
+A mis-citation of Scripture is a serious fault in a site whose whole claim is
+that it holds the KJV to be the word of God. **Check every single one.**
+
+### How the site presents quotations
+
+The house style, from the existing pages:
+
+- Text in `&ldquo;…&rdquo;` with `&rsquo;` for apostrophes and `&mdash;` for em dashes.
+- Bracketed insertions from the 1769 translators are kept as `[ought]`,
+  `[that]`, `[is]` — e.g. `&ldquo;For the kingdom of God [is] not in word, but in
+  power.&rdquo;`. Do not silently drop them and do not add your own.
+- `Cæsar` is written with the ligature: `C&aelig;sar`.
+- Ranges use an en dash in the cite: `<cite>John 11:25&ndash;26</cite>`.
+
+### A reliable automated check
+
+This walks a page, pulls every `<p>&ldquo;…&rdquo;</p>` + `<cite>` pair, and
+compares it to `purebible lookup`. Run it after editing any page with
+quotations:
+
+```python
+import re, subprocess, pathlib
+h = pathlib.Path('PAGE.html').read_text(encoding='utf-8')
+for text, cite in re.findall(r'<p>&ldquo;(.*?)&rdquo;</p>\s*<cite>(.*?)</cite>', h, re.S):
+    ref = cite.replace('&ndash;','-').replace('&amp;','&')
+    src = subprocess.run(['purebible','lookup','--no-color',ref],
+                         capture_output=True, text=True).stdout
+    src = re.sub(r'^.*?\d+:\d+\s*','',src.strip(),count=1)
+    def norm(s):
+        for a,b in [('&rsquo;',"'"),('&lsquo;',"'"),('&mdash;','-'),('&ndash;','-'),
+                    ('&aelig;','æ'),('&amp;','&'),('&hellip;','...')]:
+            s = s.replace(a,b)
+        return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",re.sub(r'<[^>]+>','',s).lower())).strip()
+    print("OK   " if norm(text) in norm(src) else "WRONG", ref)
+```
+
+### Do not use general-purpose Bible APIs for this
+
+`bible-api.com?translation=kjv` and similar were tried and rejected. They
+silently return a **modernised** text for some verses — "Render *therefore* unto
+Caesar the things *which* are Caesar's" is not KJV — while returning true KJV for
+others, so a spot check passes and then fails on the next passage. Two different
+GitHub "KJV" JSON files proved to be byte-identical to each other and both
+modernised. `purebible` is the only source here to trust.
+
+## Images
+
+Provenance for every file is in `images/CREDITS.md`, with AIC object numbers.
+Add a row when you add a picture.
+
+Artwork comes from the Art Institute of Chicago open-access API
+(<https://api.artic.edu/api/v1/artworks/>). Only use works flagged
+`is_public_domain: true`, and check that flag — do not assume.
+
+## Image conventions
+
+Three slots, and they crop differently. Getting this wrong silently breaks the
+layout, and it has:
+
+- **Banners** — 16:9, 1280px wide master. Derivatives key to **width**: `-480`
+  is exactly 480px wide.
+- **Figures** (`section-art`, `card-art`, `feature-art`) — master is 1000px on
+  the **long edge**. Derivatives key to the long edge, so a portrait master
+  gives a `-480` narrower than 480px.
+- **Footer seal** — the arms, rendered from `images/maspor-arms.svg`.
+
+Every JPEG is progressive, sRGB, no ICC profile. AVIF and WebP at 480 and 960.
+
+### The `height` attribute will beat `aspect-ratio`
+
+`.card-art img` carries `aspect-ratio: 16 / 10` **and `height: auto`**. The
+`height: auto` is load-bearing. Without it the presentational `height="750"`
+attribute wins and the crop is lost — cards render as tall strips. If you touch
+that rule, check a card renders at 1.60, not just that it still displays.
+
+`.post-card .card-art` had the same problem in a separate rule with higher
+specificity. Check both.
+
+## Checking your work
+
+Headless Chromium is at `chromium`. Serve the site and screenshot it:
+
+```
+python3 -m http.server 8731 &
+chromium --headless --disable-gpu --no-sandbox --hide-scrollbars \
+  --window-size=1280,1700 --screenshot=shot.png --virtual-time-budget=9000 \
+  'http://localhost:8731/PAGE.html'
+```
+
+**Measure, do not eyeball.** Drop a `<script>` into a copy of the page that
+replaces `document.body` with the computed rects, then `--dump-dom` and read
+the numbers.
+
+Two traps when screenshotting:
+
+- Lazy-loaded images further down the page are blank unless you strip
+  `loading="lazy"` from a throwaway copy. That is a capture artifact, not a bug —
+  confirm with the DOM before "fixing" it.
+- A very tall `--window-size` changes the layout and can leave the footer far
+  from where a normal viewport puts it. For the footer, inject a stylesheet that
+  hides everything but the footer instead.
+
+## Before committing
+
+```
+python3 - <<'PY'
+import re, pathlib
+from PIL import Image
+for f in sorted(pathlib.Path('.').glob('*.html')):
+    h = f.read_text(encoding='utf-8')
+    for r in set(re.findall(r'images/[A-Za-z0-9._-]+', h)):
+        if not pathlib.Path(r).exists(): print('MISSING', f.name, r)
+    for tag in re.findall(r'<img[^>]*>', h):
+        if 'alt=' not in tag: print('NO ALT', f.name)
+    for r, w, hh in re.findall(
+        r'src="(images/[a-z0-9.-]+\.(?:jpg|png))"[^>]*?width="(\d+)"[^>]*?height="(\d+)"', h, re.S):
+        if (int(w), int(hh)) != Image.open(r).size: print('DIM', f.name, r)
+PY
+```
+
+Every `<img>` needs real alt text. The footer seal renders at 64px via CSS while
+its attributes say 256 — that is deliberate, not a bug.
+
+## Tone
+
+The register is plain, declarative, and unhurried. Scripture is quoted, never
+paraphrased, and the site is careful to say what it does not claim. When you add
+a claim, check whether it needs a qualifying paragraph — the existing codes each
+end with a section called "What this code does not say". Keep that habit.
+
+Deity is referred to in the reverent forms already in use: the LORD, the Father,
+the Son, the Shepherd. Do not introduce a new register for one page.

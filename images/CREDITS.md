@@ -60,6 +60,12 @@ exactly as the plates above.
 | --- | --- | --- | --- |
 | `keeper-of-the-flock.jpg` | Jean-François Millet, *The Keeper of the Flock* | Art Institute of Chicago | 4776 |
 | `the-tribute-money.jpg` | Rembrandt van Rijn, *The Tribute Money*, c. 1634, etching | Art Institute of Chicago | 29277 |
+| `paul-preaching-at-athens.jpg` | Marcantonio Raimondi, after Raphael, *Saint Paul Preaching at Athens*, 1517/20, engraving | Art Institute of Chicago | 106578 |
+
+The Athens print was added for Code and Regulation No. 3 and is used for that
+page's banner and its card. It shows Paul declaring the Creator before the
+city's assembled authorities, a book of the world's lying discarded on the
+pavement, and no licence in anyone's hand.
 
 ## Replacements for the unsourced photographs, October 2026
 
