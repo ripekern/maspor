@@ -412,9 +412,9 @@ blockquote cite {
 
 .footer-seal {
   display: block;
-  width: 64px;
-  height: 64px;
-  margin: 0 0 .85rem;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 1.1rem;
 }
 
 .footer-title {
