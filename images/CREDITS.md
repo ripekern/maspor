@@ -20,7 +20,7 @@ anyway, because good stewardship of a borrowed image means saying where it came 
 
 ## Section plates, October 2026
 
-Nineteen artworks added under headings across the six pages. All are public-domain
+Twenty artworks added under headings across the six pages. All are public-domain
 works from the Art Institute of Chicago Open Access collection, each flagged
 `is_public_domain: true` in the API and downloaded over the IIIF endpoint. They were
 reduced to 1000px on the long edge and carry a visible caption on the page.
@@ -34,6 +34,7 @@ reduced to 1000px on the long edge and carry a visible caption on the page.
 | `study-for-king-david.jpg` | After Guido Reni, *Study for King David* | Art Institute of Chicago | 95898 |
 | `sermon-on-the-mount.jpg` | Jacques Callot, *The Sermon on the Mount* | Art Institute of Chicago | 80577 |
 | `sheep-by-the-pond.jpg` | Willem Buytewech, *Landscape with Trees, Pond and Sheep* | Art Institute of Chicago | 8678 |
+| `the-fourth-day.jpg` | Nicolaes de Bruyn, *Fourth Day: The Creation of the Sun, Moon, and Stars*, c. 1610, engraving | Art Institute of Chicago | 268095 |
 | `book-cover-for-the-bible.jpg` | English, *Book Cover for the Holy Bible* | Art Institute of Chicago | 25287 |
 | `illuminated-manuscript-leaf.jpg` | Italian, *Illuminated Manuscript Leaf* | Art Institute of Chicago | 72884 |
 | `baptism-of-christ.jpg` | Perugino, *The Baptism of Christ* | Art Institute of Chicago | 16197 |
@@ -232,6 +233,34 @@ The test applied was whether a reader who knows nothing of this site's position
 would see a Catholic image. For the thirty-five other works here, including every
 scriptural scene, the answer is no: bare biblical narrative, with no saints, no
 vestments, no altar and no halos other than scriptural ones.
+
+### For nudity, October 2026
+
+One further work was removed on subject matter, for a different reason. It had no
+record in this file, which is itself the note to make: provenance was traceable all
+along (AIC 268303, public domain), it simply had never been written down.
+
+| Withdrawn file | Work | What it showed | Slot |
+| --- | --- | --- | --- |
+| `the-sixth-day.jpg` | Jan Harmensz. Muller, *The Sixth Day, plate 7, from Creation of the World*, 1590 — AIC 268303 | The creation of Eve, nude and full frontal at the centre of the roundel, with Adam asleep and God reaching down from the clouds | Our King, "The seventh day is his, and it is signed" |
+
+The plate is a good engraving and an accurate piece of sixteenth-century biblical
+illustration, which is exactly the sort of thing this site otherwise uses without
+question — it shares a designer with the *Creation of the World* series the
+replacement also comes from. But it is a nude, set large in the middle of the frame
+where nothing else in the picture competes with it, on a page whose subject is the
+Sabbath and the seal. It has been replaced in the same slot by Nicolaes de Bruyn's
+*Fourth Day: The Creation of the Sun, Moon, and Stars* (AIC 268095), from the same
+Van Heemskerck design series and engraved in the same roundel format, so the page
+keeps the picture it had. That one is God in the clouds, robed, reaching toward the
+sun and the new moon above a landscape. As with the Cole lithograph, the blank sheet
+margins have been trimmed to the printed plate, keeping the letter inscriptions round
+the circle and the engraved signatures beneath it.
+
+The test applied is the same one used for the three withdrawals above, asked in a
+second register: not *would a reader see a Catholic image*, but *is there anything
+in this frame we would not put in front of a child*. For the remaining works here
+the answer is no.
 
 ### For copyright, October 2026
 
