@@ -202,9 +202,21 @@ verbatim word run of the next unit's heading. `faq`, `post-foot`, `page-head` an
 ## Tone
 
 The register is plain, declarative, and unhurried. Scripture is quoted, never
-paraphrased, and the site is careful to say what it does not claim. When you add
-a claim, check whether it needs a qualifying paragraph — the existing codes each
-end with a section called "What this code does not say". Keep that habit.
+paraphrased, and the site is careful to state a claim. When you add
+a claim, check whether it needs a qualifying paragraph — the codes each close
+with one. Keep that habit.
+
+### Never head a section with what it is not or make a counterclaim to an existing claim
+
+The one thing this register will not do is open with a negation. "What this does
+not say", "What this code does not say", and every other heading that puts a
+denial first is out, and none of them are to be reintroduced. It reads as double
+mindedness, which is exactly the fault James 1:8 names: a double minded man is
+unstable in all his ways. The site says one thing, plainly, and stops.
+
+*The conclusion of the
+matter* (Our King, "The seventh day is his, and it is signed") is the model: the
+qualifications now read as the end of an argument rather than a retraction of it.
 
 Deity is referred to in the reverent forms already in use: the LORD, the Father,
 the Son, the Shepherd. Do not introduce a new register for one page.
