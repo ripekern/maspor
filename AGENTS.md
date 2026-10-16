@@ -160,6 +160,45 @@ PY
 Every `<img>` needs real alt text. The footer seal renders at 64px via CSS while
 its attributes say 256 — that is deliberate, not a bug.
 
+## Section hand-offs — the site reads as one book
+
+Every content section closes with `<p class="note">`, and the last clause of that
+note carries the opening words of whatever comes next, wrapped in
+`<span class="carry">`. At a page boundary it carries the first heading of the next
+page instead. This is a house rule, not decoration: **a new section without a
+closing note is an unfinished section.**
+
+The reading order is fixed, and each page's last section hands to the next one:
+
+```
+index → king → charter → citizenship → heritage → benefits
+      → code-clean-browsing → code-bitcoin-cash → code-licensing → citizenship#codes
+```
+
+404 is outside the book and hands back to the first heading on `index.html`.
+
+Three rules that are easy to break by accident:
+
+- **The carried words must be verbatim** from the next heading — at least two words,
+  and never paraphrased. `Every knee shall bow` must be carried as written. Do not
+  "improve" the heading to make a carry fit; fix the carry. The one exception is a
+  heading too short to carry two words from (`Spotless`), where the carry may come
+  from that section's opening prose instead.
+- **The carry is the note's last clause.** Anything after it reads as belonging to
+  the section that follows, which is the whole point.
+- **`link-more` sits after the note**, never inside it. The note carries the words;
+  the link carries the reader. Keep them as separate elements so the grammar stays
+  the same on every page.
+
+`.note` is `grid-column: 1 / -1`, so it spans the full width of a section whatever
+layout that section uses (`.feature`, `.contact-grid`). Don't wrap it in a column.
+
+### Checking the chain
+
+Walk every content section in book order and confirm each closing note's carry is a
+verbatim word run of the next unit's heading. `faq`, `post-foot`, `page-head` and
+`banner` sections are back matter and carry no note.
+
 ## Tone
 
 The register is plain, declarative, and unhurried. Scripture is quoted, never

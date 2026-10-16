@@ -14,6 +14,7 @@
   --accent-contrast: #ffffff;
   --accent-tint: rgba(122, 31, 31, .08);
   --note-bg: rgba(122, 31, 31, .06);
+  --note-rule: rgba(122, 31, 31, .38);
   --line: #e2dccd;
   --shadow: 0 1px 2px rgba(36, 31, 24, .06), 0 8px 24px rgba(36, 31, 24, .06);
   --header-bg: rgba(250, 248, 243, .92);
@@ -31,6 +32,7 @@
   --royal-gold: #8a6612;
   --royal-surface: rgba(255, 255, 255, .72);
   --royal-note: rgba(138, 102, 18, .12);
+  --royal-note-rule: rgba(138, 102, 18, .5);
   --radius: 12px;
   --wrap: 68rem;
   --space: clamp(1rem, 2.5vw, 2rem);
@@ -54,6 +56,7 @@
   --field-bg: #100c09;
   --accent-tint: rgba(233, 143, 134, .16);
   --note-bg: rgba(233, 143, 134, .12);
+  --note-rule: rgba(233, 143, 134, .5);
   --royal-bg-1: #1e1811;
   --royal-bg-2: #251d13;
   --royal-glow: rgba(217, 180, 74, .22);
@@ -63,6 +66,7 @@
   --royal-gold: #d9b44a;
   --royal-surface: rgba(255, 255, 255, .05);
   --royal-note: rgba(217, 180, 74, .14);
+  --royal-note-rule: rgba(217, 180, 74, .5);
 }
 
 *,
@@ -379,14 +383,32 @@ blockquote cite {
   color: var(--accent);
 }
 
+/* The closing note of every section, and the words it hands to the next one.
+   It runs the full width of the section whatever layout the section uses. */
 .note {
+  grid-column: 1 / -1;
   margin-top: 1.5rem;
   padding: 1rem 1.25rem;
   background: var(--note-bg);
+  border-left: 3px solid var(--note-rule);
   border-radius: var(--radius);
   font-family: ui-sans-serif, system-ui, sans-serif;
   font-size: .98rem;
   color: var(--ink);
+  text-wrap: pretty;
+}
+
+.note + .note {
+  margin-top: .75rem;
+}
+
+.note .carry {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: .22em;
+  text-decoration-color: var(--note-rule);
 }
 
 /* Footer */
@@ -745,6 +767,11 @@ blockquote cite {
   align-items: start;
 }
 
+.contact-grid > .link-more {
+  grid-column: 1 / -1;
+  margin-top: .5rem;
+}
+
 .contact-list {
   list-style: none;
   margin: 0 0 1.5rem;
@@ -938,7 +965,13 @@ blockquote cite {
 
 .royal .note {
   background: var(--royal-note);
+  border-left-color: var(--royal-note-rule);
   color: var(--royal-fg);
+}
+
+.royal .note .carry {
+  color: var(--royal-gold);
+  text-decoration-color: var(--royal-note-rule);
 }
 
 .royal .link-more {

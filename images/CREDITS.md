@@ -79,7 +79,7 @@ then reduced to 1000px on the long edge like the plates above.
 
 | File | Work | Collection | Object |
 | --- | --- | --- | --- |
-| `coronation-of-otto-the-great.jpg` | Johann Christoph Storer, *The Coronation of Otto the Great in the Church of Saint'Ambrogio, Milan*, 1650, drawing and watercolour | Art Institute of Chicago | 185149 |
+| `trajan-crowned-by-victory.jpg` | Marcantonio Raimondi, *Trajan Crowned by Victory*, 1520/25, engraving | Art Institute of Chicago | 111555 |
 | `the-song-of-the-lark.jpg` | Jules Breton, *The Song of the Lark*, 1884, oil on canvas | Art Institute of Chicago | 94841 |
 | `the-good-shepherd.jpg` | Thomas Cole, *The Good Shepherd*, 1849, lithograph | Art Institute of Chicago | 121829 |
 
@@ -92,10 +92,11 @@ would otherwise have carried.
 
 Each was chosen to fit the heading it sits under, not merely to fill a slot.
 
-- *The Coronation of Otto the Great* stands beside "Submit for conscience' sake".
-  It shows the crown of authority being laid on a kneeling man by a churchman — the
-  meeting of divine ordinance and earthly office the passage turns on. Its warm
-  monochrome also sits comfortably beside the site's parchment palette.
+- *Trajan Crowned by Victory* stands beside "Submit for conscience' sake". The
+  passage turns on the meeting of divine ordinance and earthly office, and this
+  is that meeting in its pagan form: a soldier-emperor crowned, not by a
+  churchman, but by Victory out of the world he governs. The print is by the
+  same engraver as the Athens sheet already used for Code and Regulation No. 3.
 - *The Song of the Lark* stands beside "Righteousness exalteth a nation". A field
   under a rising sun, and a labourer standing up to it at the day's beginning.
 - *The Good Shepherd* stands beside "One family, gathered out of every nation". The
@@ -103,6 +104,9 @@ Each was chosen to fit the heading it sits under, not merely to fill a slot.
 
 The old `sunrise-over-the-ridge` file had no `-960` derivative, so the page could
 only ever offer it at 480w; the replacements all derive cleanly at both widths.
+The engraving that once filled the first of these slots, the *Coronation of Otto
+the Great*, was withdrawn in the October 2026 sweep for the reason given under
+**Removed**.
 
 ## Page banners, October 2026
 
@@ -117,9 +121,9 @@ over the IIIF endpoint.
 | --- | --- | --- | --- |
 | `italian-landscape-with-travelers.jpg` | Jan Both, *Italian Landscape with Travelers*, c. 1650, oil on canvas | Our Government | 69041 |
 | `an-alpine-scene.jpg` | Gustave Courbet, *An Alpine Scene*, 1874, oil on canvas | Our King | 39554 |
-| `decretalium-manuscript-leaf.jpg` | French (likely Toulouse), *Table of Bigamy, from the Summa Super Titulis Decretalium Completa*, 1275/99, tempera and gold | Our Charter | 2174 |
+| `numa-giving-the-laws-to-the-romans.jpg` | Giovanni Battista Galestruzzi, *Numa Pompilius Giving the Laws to the Romans*, ink or chalk wash | Our Charter | 112735 |
 | `auvers-panoramic-view.jpg` | Paul Cézanne, *Auvers, Panoramic View*, 1873–75, oil on canvas | Our Citizens | 14556 |
-| `landscape-with-st-jerome.jpg` | Belgian (Antwerp), *Landscape with the Penitent Saint Jerome*, 1530–40, oil on panel | Our Heritage | 111453 |
+| `panorama-from-the-sasso.jpg` | Claude Lorrain, *Panorama from the Sasso*, 1649/55, pen and ink | Our Heritage | 60031 |
 | `the-harvesters.jpg` | Léon Augustin Lhermitte, *The Harvesters*, 1888–89, oil on canvas | Our Benefits | 111746 |
 | `mist-rising-in-the-catskills.jpg` | Sanford Robinson Gifford, *Mist Rising at Sunset in the Catskills*, c. 1861, oil on canvas | 404 | 71971 |
 
@@ -137,15 +141,16 @@ it opens rather than to fill a slot.
 
 - **Our Government** — travellers moving through an ordered, inhabited landscape.
 - **Our King** — snow-capped peaks above a village; height, permanence, dominion.
-- **Our Charter** — a leaf of thirteenth-century canon law. The page turns on "there
-  is but one Lawgiver, and his law stands", and this is a literal written law of the
-  period. Cropped to a horizontal band it reads as a strip of script with the
-  illuminated figure at its centre; the rest of the leaf stays below the crop.
+- **Our Charter** — a crowned king handing written tablets down to the citizens
+  who kneel for them. The page turns on "there is but one Lawgiver, and his law
+  stands", and this is a law actually given, by a man. Two of the seven banners
+  here were replaced in the October 2026 sweep; the reasoning is under **Removed**.
 - **Our Citizens** — a village seen whole from above: one fold, one roofscape, out
   of every nation.
-- **Our Heritage** — a wide world of lakes and towns with a small penitent figure in
-  the foreground. "An heir, and not a spectator": the inheritance is everything
-  that spreads out beyond him.
+- **Our Heritage** — a wide world of lake, plain and distant hills, with a shepherd
+  seated on the rock at the right of it. "An heir, and not a spectator": the
+  inheritance is everything that spreads out beyond him. Replaced in the October
+  2026 sweep, for the reason under **Removed**.
 - **Our Benefits** — harvesters binding sheaves at the day's height. "He daily
   loadeth us with benefits."
 - **404** — mist closing over hills at sunset, under the page's heading "A word for
@@ -202,7 +207,35 @@ progressively.
 
 ## Removed
 
-Three images were deleted from this directory as part of the October 2026 tidy-up
+### For subject matter, October 2026
+
+Three works were removed because they are pictures of the Roman Catholic Church,
+which this site does not represent. They were public domain and properly
+credited; the problem was never provenance, it was subject matter. Each has been
+replaced, in the same slot on the same page, by a work named above.
+
+| Withdrawn file | Work | What it showed | Slot |
+| --- | --- | --- | --- |
+| `decretalium-manuscript-leaf.jpg` | French (likely Toulouse), *Table of Bigamy, from the Summa Super Titulis Decretalium Completa*, 1275/99 — AIC 2174 | A leaf of papal decretals: canon law, with a rayed halo at the head of an initial and a figure standing at an altar | Our Charter banner |
+| `coronation-of-otto-the-great.jpg` | Johann Christoph Storer, *The Coronation of Otto the Great in the Church of Saint'Ambrogio, Milan*, 1650 — AIC 185149 | A mitred bishop crowning a kneeling emperor at an altar, with a processional cross, a crozier, a candle and a columbarium in the altar base | Our Government figure |
+| `landscape-with-st-jerome.jpg` | Belgian (Antwerp), *Landscape with the Penitent Saint Jerome*, 1530–40 — AIC 111453 | A penitent figure in red cardinal's robes with a lion, a book and a skull, above a church on the cliff | Our Heritage banner |
+
+The Otto coronation is a sound picture of a real event — Otto was crowned by
+Archibald, Archbishop of Milan, at Sant'Ambrogio — and that is precisely why it
+cannot be used here: the mitre, the altar and the cross are not incidental
+detail in it, they are the subject. The charter leaf is canon law with a haloed
+saint in the initial, which is the Roman Church's own law rather than any
+written law. St Jerome is a Doctor of the Church in red, and the figure was small
+in the frame but it was what the banner was chosen for.
+
+The test applied was whether a reader who knows nothing of this site's position
+would see a Catholic image. For the thirty-five other works here, including every
+scriptural scene, the answer is no: bare biblical narrative, with no saints, no
+vestments, no altar and no halos other than scriptural ones.
+
+### For copyright, October 2026
+
+Three images were deleted from this directory as part of the same tidy-up
 because they were third-party works still under copyright, and redistributing them
 on a public site was not defensible:
 
