@@ -53,25 +53,76 @@ The house style, from the existing pages:
 
 ### A reliable automated check
 
-This walks a page, pulls every `<p>&ldquo;…&rdquo;</p>` + `<cite>` pair, and
+This walks every page, pulls each `<p>&ldquo;…&rdquo;</p>` + `<cite>` pair, and
 compares it to `purebible lookup`. Run it after editing any page with
 quotations:
 
 ```python
 import re, subprocess, pathlib
-h = pathlib.Path('PAGE.html').read_text(encoding='utf-8')
-for text, cite in re.findall(r'<p>&ldquo;(.*?)&rdquo;</p>\s*<cite>(.*?)</cite>', h, re.S):
-    ref = cite.replace('&ndash;','-').replace('&amp;','&')
-    src = subprocess.run(['purebible','lookup','--no-color',ref],
-                         capture_output=True, text=True).stdout
-    src = re.sub(r'^.*?\d+:\d+\s*','',src.strip(),count=1)
-    def norm(s):
-        for a,b in [('&rsquo;',"'"),('&lsquo;',"'"),('&mdash;','-'),('&ndash;','-'),
-                    ('&aelig;','æ'),('&amp;','&'),('&hellip;','...')]:
-            s = s.replace(a,b)
-        return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",re.sub(r'<[^>]+>','',s).lower())).strip()
-    print("OK   " if norm(text) in norm(src) else "WRONG", ref)
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def lookup(ref):
+    return subprocess.run(['purebible','lookup','--no-color',ref],
+                          capture_output=True, text=True).stdout
+
+def norm(s):
+    for a,b in [('&rsquo;',"'"),('&lsquo;',"'"),('&mdash;','-'),('&ndash;','-'),
+                ('&aelig;','æ'),('&amp;','&'),('&para;','')]:
+        s = s.replace(a,b)
+    return re.sub(r"\s+"," ",re.sub(r"[^a-z0-9]+"," ",
+                  re.sub(r'<[^>]+>','',s).lower())).strip()
+
+def verses(ref):
+    """Every line of KJV a cite points at, with the verse prefixes stripped.
+
+    Handles all three cite shapes the site uses: a single reference, a range
+    ("Luke 13:7-8"), a list ("Psalm 103:2, 5", where the book and chapter
+    carry over), and an annotated cite ("Genesis 3:15 &mdash; fulfilled in
+    Galatians 4:4"), which names the prophecy first and is checked against
+    that alone.
+    """
+    m = re.match(r'\s*([1-3]?\s?[A-Za-z]+)\s+(\d+):([\d,-]+)', ref)
+    if not m:
+        return []
+    book, chapter, spec = m.group(1), m.group(2), m.group(3)
+    out = []
+    for part in spec.split(','):
+        part = part.strip()
+        # A bare verse after the first inherits the chapter: "103:2, 5" -> 103:5
+        out.append(lookup(f'{book} {part}' if ':' in part
+                          else f'{book} {chapter}:{part}').strip())
+    # Strip EVERY verse prefix, not just the first. A range prints as
+    # "Luke 13:7 ...\nLuke 13:8 ...", and leaving the second in injects
+    # "luke 13 8" into the middle of the text being searched.
+    return [re.sub(r'^\S+\s+\d+:\d+\s+', '', re.sub(r'^\S+\s+\d+:\d+\s*', '', v), flags=re.M)
+            for v in out if v.strip()]
+
+for f in sorted(pathlib.Path('.').glob('*.html')):
+    h = f.read_text(encoding='utf-8')
+    for text, cite in re.findall(r'<p>&ldquo;(.*?)&rdquo;</p>\s*<cite>(.*?)</cite>', h, re.S):
+        ref = cite.replace('&ndash;','-').replace('&amp;','&')
+        src = verses(ref)
+        if not src:
+            print("UNRESOLVED", f.name, ref); continue
+        src = norm(' '.join(src))
+        print("OK   " if norm(text) in src else "WRONG", f.name, ref)
 ```
+
+**The elision is why this works.** A quotation may be shortened with
+`&hellip;`, and `norm` must reduce it to a space rather than to `...` — so a
+verse quoted with a gap still matches the untruncated source. Both kinds are
+correct:
+
+```html
+<p>&ldquo;There is neither Jew nor Greek, there is neither bond nor free&hellip;
+for ye are all one in Christ Jesus.&rdquo;</p>
+```
+
+`&hellip;` is an elision the site made deliberately, never a licence to alter a
+word. Three traps this check used to fall into, all now handled: ranges carried
+a verse number into the middle of the text, elisions were compared literally,
+and annotated cites could not be resolved at all.
 
 ### Do not use general-purpose Bible APIs for this
 
