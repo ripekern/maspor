@@ -82,7 +82,10 @@ def verses(ref):
     Galatians 4:4"), which names the prophecy first and is checked against
     that alone.
     """
-    m = re.match(r'\s*([1-3]?\s?[A-Za-z]+)\s+(\d+):([\d,-]+)', ref)
+    # A bare class of [\d,-] stops at the space in a list cite ("Psalm 103:2, 5"),
+    # silently dropping every verse after the first, so allow more digit runs
+    # after whitespace. It still stops at "&mdash;" in an annotated cite.
+    m = re.match(r'\s*([1-3]?\s?[A-Za-z]+)\s+(\d+):([\d,-]+(?:\s+[\d,-]+)*)', ref)
     if not m:
         return []
     book, chapter, spec = m.group(1), m.group(2), m.group(3)
@@ -94,9 +97,29 @@ def verses(ref):
                           else f'{book} {chapter}:{part}').strip())
     # Strip EVERY verse prefix, not just the first. A range prints as
     # "Luke 13:7 ...\nLuke 13:8 ...", and leaving the second in injects
-    # "luke 13 8" into the middle of the text being searched.
-    return [re.sub(r'^\S+\s+\d+:\d+\s+', '', re.sub(r'^\S+\s+\d+:\d+\s*', '', v), flags=re.M)
-            for v in out if v.strip()]
+    # "luke 13 8" into the middle of the text being searched. Match lazily to
+    # the verse numbers, so "1 Corinthians 12:9" comes off whole.
+    return [re.sub(r'^\s*[^\n]*?\d+:\d+\s+', '', v, flags=re.M) for v in out if v.strip()]
+
+def matches(text, src):
+    """True when every piece of a quotation appears in the KJV, in order.
+
+    A quotation may be shortened with `&hellip;`, which drops whole clauses,
+    so it cannot be tested as one substring: "them also I must bring&hellip; and
+    there shall be one fold" skips "and they shall hear my voice" in the
+    middle. Split on the elision and require each piece to be found in turn,
+    each one starting where the last left off.
+    """
+    src, pos = norm(src), 0
+    for frag in re.split(r'&hellip;|&#8230;|\u2026', text):
+        frag = norm(frag)
+        if not frag:
+            continue
+        i = src.find(frag, pos)
+        if i < 0:
+            return False
+        pos = i + len(frag)
+    return True
 
 for f in sorted(pathlib.Path('.').glob('*.html')):
     h = f.read_text(encoding='utf-8')
@@ -105,8 +128,7 @@ for f in sorted(pathlib.Path('.').glob('*.html')):
         src = verses(ref)
         if not src:
             print("UNRESOLVED", f.name, ref); continue
-        src = norm(' '.join(src))
-        print("OK   " if norm(text) in src else "WRONG", f.name, ref)
+        print("OK   " if matches(text, ' '.join(src)) else "WRONG", f.name, ref)
 ```
 
 **The elision is why this works.** A quotation may be shortened with
