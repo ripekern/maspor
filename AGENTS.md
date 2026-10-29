@@ -244,7 +244,7 @@ closing note is an unfinished section.**
 The reading order is fixed, and each page's last section hands to the next one:
 
 ```
-index → king → charter → citizenship → heritage → benefits
+index → king → charter → heritage → citizenship → benefits
       → code-clean-browsing → code-bitcoin-cash → code-licensing → citizenship#codes
 ```
 
