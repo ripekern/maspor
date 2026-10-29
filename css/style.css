@@ -38,35 +38,37 @@
   --space: clamp(1rem, 2.5vw, 2rem);
 }
 
-[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #14100c;
-  --surface: #1f1a14;
-  --surface-alt: #191410;
-  --ink: #f3ede1;
-  --ink-soft: #c6bca9;
-  --accent: #e98f86;
-  --accent-soft: #f3a89f;
-  --accent-solid: #a83a33;
-  --accent-solid-hover: #bf4a42;
-  --accent-contrast: #ffffff;
-  --line: #332b21;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 28px rgba(0, 0, 0, .45);
-  --header-bg: rgba(20, 16, 12, .9);
-  --field-bg: #100c09;
-  --accent-tint: rgba(233, 143, 134, .16);
-  --note-bg: rgba(233, 143, 134, .12);
-  --note-rule: rgba(233, 143, 134, .5);
-  --royal-bg-1: #1e1811;
-  --royal-bg-2: #251d13;
-  --royal-glow: rgba(217, 180, 74, .22);
-  --royal-line: #3a3226;
-  --royal-fg: #f4efe3;
-  --royal-muted: #cfc6b4;
-  --royal-gold: #d9b44a;
-  --royal-surface: rgba(255, 255, 255, .05);
-  --royal-note: rgba(217, 180, 74, .14);
-  --royal-note-rule: rgba(217, 180, 74, .5);
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #14100c;
+    --surface: #1f1a14;
+    --surface-alt: #191410;
+    --ink: #f3ede1;
+    --ink-soft: #c6bca9;
+    --accent: #e98f86;
+    --accent-soft: #f3a89f;
+    --accent-solid: #a83a33;
+    --accent-solid-hover: #bf4a42;
+    --accent-contrast: #ffffff;
+    --line: #332b21;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 28px rgba(0, 0, 0, .45);
+    --header-bg: rgba(20, 16, 12, .9);
+    --field-bg: #100c09;
+    --accent-tint: rgba(233, 143, 134, .16);
+    --note-bg: rgba(233, 143, 134, .12);
+    --note-rule: rgba(233, 143, 134, .5);
+    --royal-bg-1: #1e1811;
+    --royal-bg-2: #251d13;
+    --royal-glow: rgba(217, 180, 74, .22);
+    --royal-line: #3a3226;
+    --royal-fg: #f4efe3;
+    --royal-muted: #cfc6b4;
+    --royal-gold: #d9b44a;
+    --royal-surface: rgba(255, 255, 255, .05);
+    --royal-note: rgba(217, 180, 74, .14);
+    --royal-note-rule: rgba(217, 180, 74, .5);
+  }
 }
 
 *,
@@ -233,35 +235,8 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Theme toggle */
 .theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-  color: var(--ink);
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1;
-  flex: none;
-  transition: background-color .15s ease, border-color .15s ease;
-}
-
-.theme-toggle:hover {
-  background: var(--surface-alt);
-}
-
-.theme-toggle::before {
-  content: "\1F319 ";
-}
-
-[data-theme="dark"] .theme-toggle::before {
-  content: "\2600";
+  display: none;
 }
 
 /* Eyebrow + call to action */
